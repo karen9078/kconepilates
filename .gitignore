@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Audio source files
+*.wav
+
+# Large non-web files (not referenced by HTML)
+/JPG/
+/塔架.jpg
+/网站图片4.png
+/chair 迈瑞秋.jpg
+/KCONE器械档案集.docx
+
+# About factory tour videos - too large for git (592MB)
+# Upload to YouTube and embed via video.html instead
+/ABOUT/
+
+# Large product videos (>25MB - exceeds Cloudflare Pages 25MB limit)
+# Host these on YouTube or CDN, then update <source src> in HTML
+**/rx-video.mp4
+**/T02-video.mp4
+**/chair w01.mp4
+**/*Showcase.mp4

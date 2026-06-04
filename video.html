@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KCONE Workshop Video</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #0f0f0f;
+  display: flex; flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'DM Sans', sans-serif;
+  padding: 20px;
+}
+.back-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  font-size: 12px; letter-spacing: 0.08em;
+  margin-bottom: 24px;
+  transition: color 0.2s;
+  align-self: flex-start;
+}
+.back-btn:hover { color: #fff; }
+video {
+  max-width: 100%;
+  max-height: 85vh;
+  border-radius: 2px;
+}
+</style>
+</head>
+<body>
+  <a href="index.html" class="back-btn" id="backBtn">← BACK TO KCONE</a>
+  <video controls autoplay playsinline>
+    <source src="" type="video/mp4">
+  </video>
+<script>
+var videos = {
+  2: 'ABOUT/KCONE%20Workshop%C2%A0Diaries%C2%A0The%C2%A0Art%C2%A0of%C2%A0Manufacturing%232/KCONE%20Workshop%C2%A0Diaries%C2%A0The%C2%A0Art%C2%A0of%C2%A0Manufacturing%232.mp4',
+  3: 'ABOUT/KCONE%20Workshop%C2%A0Diaries%C2%A0The%C2%A0Art%C2%A0of%C2%A0Manufacturing%233/KCONE%20Workshop%C2%A0Diaries%C2%A0The%C2%A0Art%C2%A0of%C2%A0Manufacturing%233.mp4',
+  4: 'ABOUT/KCONE%C2%A0Workshop%C2%A0Diaries%C2%A0The%C2%A0Art%C2%A0of%C2%A0Manufacturing%234/KCONE%C2%A0Workshop%C2%A0Diaries%C2%A0The%C2%A0Art%C2%A0of%C2%A0Manufacturing%234.mp4',
+  5: 'ABOUT/KCONE%C2%A0Workshop%C2%A0Diaries%C2%A0The%C2%A0Art%C2%A0of%C2%A0Manufacturing%235/KCONE%C2%A0Workshop%C2%A0Diaries%C2%A0The%C2%A0Art%C2%A0of%C2%A0Manufacturing%235.mp4',
+  6: 'EDUCATION/PHI%E8%81%94%E5%90%88%E5%BC%80%E5%8F%91.mp4'
+};
+
+var p = new URLSearchParams(window.location.search);
+var id = p.get('id');
+if (id && videos[id]) {
+  document.querySelector('video source').src = videos[id];
+  document.querySelector('video').load();
+  // Set back button to return to the right section
+  if (id >= 2 && id <= 5) {
+    document.getElementById('backBtn').href = 'index.html#about';
+  } else if (id == 6) {
+    document.getElementById('backBtn').href = 'index.html#education';
+  }
+}
+</script>
+</body>
+</html>
