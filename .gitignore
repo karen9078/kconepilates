@@ -15,9 +15,7 @@
 /chair 迈瑞秋.jpg
 /KCONE器械档案集.docx
 
-# About factory tour videos - too large for git (592MB)
-# Upload to YouTube and embed via video.html instead
-/ABOUT/
+# About workshop videos - now compressed and tracked in git
 
 # Large videos are now compressed and tracked in git
 # For future videos over 25MB, add exclusion rules here
