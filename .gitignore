@@ -19,9 +19,5 @@
 # Upload to YouTube and embed via video.html instead
 /ABOUT/
 
-# Large product videos (>25MB - exceeds Cloudflare Pages 25MB limit)
-# Host these on YouTube or CDN, then update <source src> in HTML
-**/rx-video.mp4
-**/T02-video.mp4
-**/chair w01.mp4
-**/*Showcase.mp4
+# Large videos are now compressed and tracked in git
+# For future videos over 25MB, add exclusion rules here
