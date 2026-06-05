@@ -451,6 +451,31 @@ section { padding: 56px 48px; }
 .pillar:hover .pillar-play { color: var(--black); }
 .pillar-num { position: relative; z-index: 1; }
 
+/* ── VIDEO MODAL ── */
+.video-overlay {
+  position: fixed; inset: 0; z-index: 999;
+  background: rgba(0,0,0,0.85);
+  display: none; align-items: center; justify-content: center;
+  padding: 40px;
+  backdrop-filter: blur(4px);
+}
+.video-overlay.active { display: flex; }
+.video-modal {
+  position: relative; width: 100%; max-width: 900px;
+  background: #000; border-radius: 4px; overflow: hidden;
+}
+.video-modal video {
+  width: 100%; display: block; max-height: 80vh;
+}
+.video-close {
+  position: absolute; top: 12px; right: 16px;
+  font-size: 28px; color: rgba(255,255,255,0.6);
+  cursor: pointer; z-index: 10; line-height: 1;
+  transition: color 0.2s; background: none; border: none;
+  font-family: 'DM Sans', sans-serif;
+}
+.video-close:hover { color: #fff; }
+
 /* ── FEATURES ── */
 .features { background: var(--off); color: var(--black); }
 .features-heading {
@@ -967,7 +992,7 @@ footer {
       <p style="font-size:13px; color:var(--gray); line-height:1.9; margin-bottom:20px;">We have established a deep strategic partnership with <strong>PHI</strong>, an internationally recognized authority in the Pilates industry, to jointly develop and design exclusive courses and equipment application solutions.</p>
       <p style="font-size:13px; color:var(--gray); line-height:1.9; margin-bottom:20px;">This system deeply integrates PHI&#39;s sports rehabilitation science with ergonomic principles, aiming to break through the limitations of traditional teaching. Leveraging these joint R&amp;D achievements, we provide studios with a full-chain instructor training program that spans from foundational theory to practical application.</p>
       <p style="font-size:13px; color:var(--gray); line-height:1.9; margin-bottom:28px;">This empowers instructors to master precise postural assessment and movement programming, ultimately helping you build a highly competitive and professional teaching team.</p>
-      <a href="video.html?id=6" class="cta-btn">▶ PLAY TRAINING VIDEO</a>
+      <a href="javascript:void(0)" class="cta-btn" onclick="openVideo(6)">▶ PLAY TRAINING VIDEO</a>
     </div>
     <div style="border-radius:2px; overflow:hidden;">
       <video controls muted loop playsinline style="width:100%; display:block; border-radius:2px;">
@@ -989,42 +1014,34 @@ footer {
       </p>
     </div>
         <div class="about-pillars">
-      <a href="video.html?id=2" style="text-decoration:none;color:inherit;display:block;">
-      <div class="pillar" style="background-image:url(ABOUT/Design.png);">
+      <div class="pillar" style="background-image:url(ABOUT/Design.png);" onclick="openVideo(2)">
         <div class="pillar-num">01</div>
         
         <div class="pillar-title">Design</div>
         <div class="pillar-text">Unique aesthetics and outstanding functionality in every product line.</div>
         <div class="pillar-play">▶ Watch</div>
       </div>
-      </a>
-      <a href="video.html?id=3" style="text-decoration:none;color:inherit;display:block;">
-      <div class="pillar" style="background-image:url(ABOUT/Quality.png);">
+      <div class="pillar" style="background-image:url(ABOUT/Quality.png);" onclick="openVideo(3)">
         <div class="pillar-num">02</div>
         
         <div class="pillar-title">Quality</div>
         <div class="pillar-text">Military-grade bearings, laser-welded frames, custom-tested springs.</div>
         <div class="pillar-play">▶ Watch</div>
       </div>
-      </a>
-      <a href="video.html?id=4" style="text-decoration:none;color:inherit;display:block;">
-      <div class="pillar" style="background-image:url(ABOUT/Service.png);">
+      <div class="pillar" style="background-image:url(ABOUT/Service.png);" onclick="openVideo(4)">
         <div class="pillar-num">03</div>
         
         <div class="pillar-title">Service</div>
         <div class="pillar-text">Personalized consultations, custom solutions, proactive after-sales care.</div>
         <div class="pillar-play">▶ Watch</div>
       </div>
-      </a>
-      <a href="video.html?id=5" style="text-decoration:none;color:inherit;display:block;">
-      <div class="pillar" style="background-image:url(ABOUT/OEM.png);">
+      <div class="pillar" style="background-image:url(ABOUT/OEM.png);" onclick="openVideo(5)">
         <div class="pillar-num">04</div>
         
         <div class="pillar-title">OEM</div>
         <div class="pillar-text">Color options, OEM branding, and chain-store customization available.</div>
         <div class="pillar-play">▶ Watch</div>
       </div>
-      </a>
     </div>
   </div>
 </section>
@@ -1303,6 +1320,40 @@ function copyWechat() {
     setTimeout(function() { el.textContent = 'COPY'; }, 2000);
   });
 }
+
+/* ── VIDEO MODAL ── */
+var videoSrcs = {
+  2: 'ABOUT/1.mp4',
+  3: 'ABOUT/2.mp4',
+  4: 'ABOUT/3.mp4',
+  5: 'ABOUT/4.mp4',
+  6: 'EDUCATION/PHI-joint-dev.mp4'
+};
+function openVideo(id) {
+  var overlay = document.getElementById('videoOverlay');
+  var video = document.getElementById('modalVideo');
+  video.src = videoSrcs[id];
+  video.load();
+  overlay.classList.add('active');
+  video.play();
+}
+function closeVideo() {
+  var overlay = document.getElementById('videoOverlay');
+  var video = document.getElementById('modalVideo');
+  video.pause();
+  video.src = '';
+  overlay.classList.remove('active');
+}
 </script>
+
+<!-- VIDEO MODAL -->
+<div class="video-overlay" id="videoOverlay" onclick="closeVideo()">
+  <div class="video-modal" onclick="event.stopPropagation()">
+    <button class="video-close" onclick="closeVideo()">✕</button>
+    <video controls playsinline id="modalVideo">
+      <source src="" type="video/mp4">
+    </video>
+  </div>
+</div>
 
 </body></html>
