@@ -1350,7 +1350,7 @@ function closeVideo() {
 <div class="video-overlay" id="videoOverlay" onclick="closeVideo()">
   <div class="video-modal" onclick="event.stopPropagation()">
     <button class="video-close" onclick="closeVideo()">✕</button>
-    <video controls playsinline id="modalVideo">
+    <video controls autoplay muted playsinline id="modalVideo">
       <source src="" type="video/mp4">
     </video>
   </div>
