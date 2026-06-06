@@ -1523,9 +1523,9 @@ function closeVideo() {
 
 <!-- Feature Image Lightbox -->
 <div class="video-overlay" id="featureLightbox" onclick="closeFeatureImg()">
-  <div class="video-modal" onclick="event.stopPropagation()" style="background:transparent;max-width:800px;position:relative;">
+  <div class="video-modal" onclick="event.stopPropagation()" style="background:transparent;max-width:800px;position:relative;overflow:visible;">
     <img id="featureLightboxImg" src="" alt="Engineering Standard" style="width:100%;display:block;border-radius:4px;">
-    <button onclick="closeFeatureImg()" style="position:absolute;top: -36px; right:0; width:30px; height:30px; font-size:18px; color:#fff; background:rgba(0,0,0,0.5); border:none; border-radius:50%; cursor:pointer; font-family:'DM Sans',sans-serif; line-height:30px; text-align:center; transition:background 0.2s;" onmouseover="this.style.background='rgba(0,0,0,0.8)'" onmouseout="this.style.background='rgba(0,0,0,0.5)'">✕</button>
+    <button onclick="closeFeatureImg()" style="position:fixed;top:20px;right:24px;width:36px;height:36px;font-size:18px;color:#fff;background:rgba(0,0,0,0.55);border:none;border-radius:50%;cursor:pointer;font-family:'DM Sans',sans-serif;line-height:36px;text-align:center;z-index:10000;transition:background 0.2s;" onmouseover="this.style.background='rgba(0,0,0,0.8)'" onmouseout="this.style.background='rgba(0,0,0,0.55)'">✕</button>
   </div>
 </div>
 
