@@ -507,7 +507,7 @@ section { padding: 56px 48px; }
   display: grid; grid-template-columns: repeat(3, 1fr);
   gap: 0;
 }
-.feature-item { padding: 28px 24px; background: var(--white); transition: background 0.15s; position: relative; border: 1px solid var(--border); background-size: cover; background-position: center; }
+.feature-item { padding: 28px 24px; background: var(--white); transition: background 0.15s; position: relative; border: 1px solid var(--border); background-size: cover; background-position: center; cursor: pointer; min-height: 230px; display: flex; flex-direction: column; }
 .feature-item::after {
   content: ''; position: absolute; inset: 0;
   background: rgba(250,250,248,0.55);
@@ -526,7 +526,9 @@ section { padding: 56px 48px; }
   font-size: 10px; color: var(--gray-light); letter-spacing: 0.2em; margin-bottom: 18px; position: relative; z-index: 1;
 }
 .feature-title { font-size: 14px; font-weight: 500; color: var(--black); margin-bottom: 9px; position: relative; z-index: 1; }
-.feature-desc { font-size: 12px; color: var(--gray); line-height: 1.75; position: relative; z-index: 1; }
+.feature-desc { font-size: 12px; color: var(--gray); line-height: 1.75; position: relative; z-index: 1; flex: 1; }
+.feature-view { font-size: 10px; letter-spacing: 0.12em; color: var(--gray-light); margin-top: 10px; position: relative; z-index: 1; transition: color 0.2s; }
+.feature-item:hover .feature-view { color: var(--black); }
 
 /* ── CONTACT ── */
 .contact { background: var(--white); scroll-margin-top: 80px; }
@@ -697,7 +699,7 @@ footer {
   /* Features */
   .features-grid { grid-template-columns: 1fr; }
   .features-heading { font-size: 28px; max-width: 100%; }
-  .feature-item { padding: 20px 16px; }
+  .feature-item { padding: 20px 16px; min-height: 200px; }
 
   /* Contact form */
   .contact-sub { max-width: 100%; }
@@ -1193,42 +1195,47 @@ footer {
   </div>
   <h2 class="features-heading fade-in" style="transition-delay: 0s;">Built to a standard no one else is willing to keep.</h2>
   <div class="features-grid">
-    <div class="feature-item fade-in" style="background-image:url(ENGINEERING%20STANDARDS/Patented%20360%C2%B0%20Silent%20Pulley.png); transition-delay:0s; ;">
+    <div class="feature-item fade-in" style="background-image:url(ENGINEERING%20STANDARDS/Patented%20360%C2%B0%20Silent%20Pulley.png); transition-delay:0s;" onclick="openFeatureImg(this)">
       <div class="feature-num">01</div>
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(15,15,15,0.15)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
       <div class="feature-title">Patented 360° Silent Pulley</div>
       <div class="feature-desc">Smooth, noise-free operation on all reformer models. Military-grade medical-standard bearings ensure high precision and long-term durability.</div>
+      <div class="feature-view">VIEW IMAGE →</div>
     </div>
-    <div class="feature-item fade-in" style="background-image:url(ENGINEERING%20STANDARDS/Custom%20Spring%20System.png); transition-delay:0s; ;">
+    <div class="feature-item fade-in" style="background-image:url(ENGINEERING%20STANDARDS/Custom%20Spring%20System.png); transition-delay:0s;" onclick="openFeatureImg(this)">
       <div class="feature-num">02</div>
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(15,15,15,0.15)" stroke-width="1.5"><path d="M12 2l2 4 4 .5-3 3 1 4.5-4-2.5-4 2.5 1-4.5-3-3 4-.5z"/></svg>
       <div class="feature-title">Custom Spring System</div>
       <div class="feature-desc">KCONE custom imported springs tested for over 800,000 stretches. Backed by a 3-year quality guarantee. Color-coded for easy identification.</div>
+      <div class="feature-view">VIEW IMAGE →</div>
     </div>
-    <div class="feature-item fade-in" style="background-image:url(ENGINEERING%20STANDARDS/Laser-Welded%20Structure.png); transition-delay:0s; ;">
+    <div class="feature-item fade-in" style="background-image:url(ENGINEERING%20STANDARDS/Laser-Welded%20Structure.png); transition-delay:0s;" onclick="openFeatureImg(this)">
       <div class="feature-num">03</div>
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(15,15,15,0.15)" stroke-width="1.5"><path d="M12 2v20M2 12h20"/><path d="M4 4l16 16M20 4L4 20"/></svg>
       <div class="feature-title">Laser-Welded Structure</div>
       <div class="feature-desc">Main beams laser-cut from a single sheet, withstanding 130 kg operating pressure. Integrated laser-welded carriage for ultra-smooth gliding.</div>
+      <div class="feature-view">VIEW IMAGE →</div>
     </div>
-    <div class="feature-item fade-in" style="background-image:url(ENGINEERING%20STANDARDS/OEM%20%26%20Customization.png); transition-delay:0s; ;">
+    <div class="feature-item fade-in" style="background-image:url(ENGINEERING%20STANDARDS/OEM%20%26%20Customization.png); transition-delay:0s;" onclick="openFeatureImg(this)">
       <div class="feature-num">04</div>
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(15,15,15,0.15)" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4m0 14v4m11-11h-4M5 12H1m18.36-7.36l-2.83 2.83M7.47 16.53L4.64 19.36m14.72 0l-2.83-2.83M7.47 7.47L4.64 4.64"/></svg>
       <div class="feature-title">OEM &amp; Customization</div>
-      <div class="feature-desc" style="position:relative;z-index:1;">Colors, branding straps, and structural modifications available. Designed for chain studios and distributors requiring consistent brand identity.</div>
       <div class="feature-desc">Colors, branding straps, and structural modifications available. Designed for chain studios and distributors requiring consistent brand identity.</div>
+      <div class="feature-view">VIEW IMAGE →</div>
     </div>
-    <div class="feature-item fade-in" style="background-image:url(ENGINEERING%20STANDARDS/Premium%20Materials.png); transition-delay:0s; ;">
+    <div class="feature-item fade-in" style="background-image:url(ENGINEERING%20STANDARDS/Premium%20Materials.png); transition-delay:0s;" onclick="openFeatureImg(this)">
       <div class="feature-num">05</div>
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(15,15,15,0.15)" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
       <div class="feature-title">Premium Materials</div>
       <div class="feature-desc">Carbon steel, 304 stainless steel, aircraft-grade aluminum, and imported leather — each material selected for its specific role and longevity.</div>
+      <div class="feature-view">VIEW IMAGE →</div>
     </div>
-    <div class="feature-item fade-in" style="background-image:url(ENGINEERING%20STANDARDS/No%20Detail%20Overlooked.png); transition-delay:0s; ;">
+    <div class="feature-item fade-in" style="background-image:url(ENGINEERING%20STANDARDS/No%20Detail%20Overlooked.png); transition-delay:0s;" onclick="openFeatureImg(this)">
       <div class="feature-num">06</div>
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(15,15,15,0.15)" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
       <div class="feature-title">No Detail Overlooked</div>
       <div class="feature-desc">From thickened shoulder pads to ergonomic carry handles — every element is designed with the practitioner in mind. Not even a single screw is missed.</div>
+      <div class="feature-view">VIEW IMAGE →</div>
     </div>
   </div>
 </section>
@@ -1470,6 +1477,17 @@ function toggleMenu() {
   document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
 }
 
+/* ── FEATURE IMAGE LIGHTBOX ── */
+function openFeatureImg(el) {
+  var bg = el.style.backgroundImage;
+  var url = bg.replace(/^url\(["']?/, '').replace(/["']?\)$/, '');
+  document.getElementById('featureLightboxImg').src = url;
+  document.getElementById('featureLightbox').classList.add('active');
+}
+function closeFeatureImg() {
+  document.getElementById('featureLightbox').classList.remove('active');
+}
+
 /* ── VIDEO MODAL ── */
 var videoSrcs = {
   2: 'ABOUT/1.mp4',
@@ -1502,6 +1520,14 @@ function closeVideo() {
     <video controls autoplay muted playsinline id="modalVideo">
       <source src="" type="video/mp4">
     </video>
+  </div>
+</div>
+
+<!-- Feature Image Lightbox -->
+<div class="video-overlay" id="featureLightbox" onclick="closeFeatureImg()">
+  <div class="video-modal" onclick="event.stopPropagation()" style="background:transparent;max-width:800px;">
+    <button class="video-close" onclick="closeFeatureImg()">✕</button>
+    <img id="featureLightboxImg" src="" alt="Engineering Standard" style="width:100%;display:block;border-radius:4px;">
   </div>
 </div>
 
