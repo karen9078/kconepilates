@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>高德物流管理系统</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== 侧边栏 ===== -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-icon">高</div>
+    <div class="logo-text">
+      高德物流
+      <small>第三方物流管理系统</small>
+    </div>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-item active" data-page="dashboard" onclick="navigate('dashboard')">
+      <span class="nav-icon">📊</span> 首页仪表盘
+    </div>
+
+    <div class="nav-section-title">业务管理</div>
+
+    <div class="nav-item" data-page="waybills" onclick="navigate('waybills')">
+      <span class="nav-icon">📋</span> 运单管理
+    </div>
+    <div class="nav-item" data-page="revenue" onclick="navigate('revenue')">
+      <span class="nav-icon">💰</span> 订单收入管理
+    </div>
+
+    <div class="nav-section-title">运单跟踪</div>
+
+    <div class="nav-item" data-page="tracking" onclick="navigate('tracking')">
+      <span class="nav-icon">📦</span> 所有跟踪
+    </div>
+    <div class="nav-item nav-sub-item" data-page="tracking-dispatch" onclick="navigate('tracking-dispatch')">
+      <span class="status-dot" style="background:#f59e0b"></span> 待调度
+    </div>
+    <div class="nav-item nav-sub-item" data-page="tracking-pickup" onclick="navigate('tracking-pickup')">
+      <span class="status-dot" style="background:#3b82f6"></span> 待提货
+    </div>
+    <div class="nav-item nav-sub-item" data-page="tracking-delivery" onclick="navigate('tracking-delivery')">
+      <span class="status-dot" style="background:#6366f1"></span> 待送达
+    </div>
+    <div class="nav-item nav-sub-item" data-page="tracking-completed" onclick="navigate('tracking-completed')">
+      <span class="status-dot" style="background:#22c55e"></span> 已完成
+    </div>
+    <div class="nav-item nav-sub-item" data-page="tracking-exception" onclick="navigate('tracking-exception')">
+      <span class="status-dot" style="background:#ef4444"></span> 有异常
+    </div>
+    <div class="nav-item nav-sub-item" data-page="tracking-receipt" onclick="navigate('tracking-receipt')">
+      <span class="status-dot" style="background:#a855f7"></span> 待回单
+    </div>
+  </nav>
+  <div class="sidebar-footer">高德物流 © 2026</div>
+</aside>
+
+<!-- ===== 主内容 ===== -->
+<div class="main-content">
+
+  <!-- 顶部栏 -->
+  <header class="header">
+    <div class="header-left">
+      <button class="mobile-toggle" onclick="toggleSidebar()">☰</button>
+      <div class="breadcrumb">高德物流 / <span id="page-title">首页仪表盘</span></div>
+    </div>
+    <div class="header-right">
+      <button class="header-btn">🔔<span class="badge">3</span></button>
+      <div class="user-info">
+        <div class="user-avatar">管</div>
+        <span class="user-name">管理员</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- 页面内容容器 -->
+  <div class="page-content" id="page-content">
+    <!-- 由 JS 动态渲染 -->
+  </div>
+
+</div>
+
+<!-- ===== 模态框 ===== -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="modal-title">标题</h3>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body" id="modal-body">
+      <!-- 动态内容 -->
+    </div>
+    <div class="modal-footer" id="modal-footer">
+      <button class="btn btn-outline" onclick="closeModal()">取消</button>
+      <button class="btn btn-primary" id="modal-confirm">确认</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
