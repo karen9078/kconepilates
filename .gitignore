@@ -19,3 +19,6 @@
 
 # Large videos are now compressed and tracked in git
 # For future videos over 25MB, add exclusion rules here
+/hero视频.mp4
+.reasonix/
+高德物流系统/
