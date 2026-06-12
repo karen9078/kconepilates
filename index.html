@@ -905,7 +905,7 @@ footer {
 <!-- HERO -->
 <div class="hero" id="home">
   <div class="hero-bg">
-    <video id="heroVideo" autoplay muted playsinline preload="auto">
+    <video id="heroVideo" autoplay muted loop playsinline preload="auto">
   <source src="hero-video-mobile.mp4" media="(max-width: 768px)" type="video/mp4">
   <source src="hero-video-compressed.mp4" type="video/mp4">
 </video>
@@ -1540,4 +1540,4 @@ function closeVideo() {
   </div>
 </div>
 
-<script>var hv=document.getElementById("heroVideo");if(hv){hv.play();function tryPlay(){hv.play();}document.addEventListener("touchstart",tryPlay,{once:true});document.addEventListener("click",tryPlay,{once:true});hv.addEventListener("timeupdate",function(){if(this.currentTime>=this.duration-0.48)this.currentTime=0;});}</script></body></html>
+<script>var hv=document.getElementById("heroVideo");if(hv){hv.play();document.addEventListener("touchstart",function(){hv.play();},{once:true});}</script></body></html>
