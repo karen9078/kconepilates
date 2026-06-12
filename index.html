@@ -1540,4 +1540,4 @@ function closeVideo() {
   </div>
 </div>
 
-<script>var hv=document.getElementById("heroVideo");if(hv){hv.play();hv.addEventListener("timeupdate",function(){if(this.currentTime>=this.duration-0.48)this.currentTime=0;});}</script></body></html>
+<script>var hv=document.getElementById("heroVideo");if(hv){hv.play();function tryPlay(){hv.play();}document.addEventListener("touchstart",tryPlay,{once:true});document.addEventListener("click",tryPlay,{once:true});hv.addEventListener("timeupdate",function(){if(this.currentTime>=this.duration-0.48)this.currentTime=0;});}</script></body></html>
