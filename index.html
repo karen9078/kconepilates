@@ -228,8 +228,16 @@ nav.scrolled { box-shadow: 0 1px 20px rgba(0,0,0,0.06); }
 }
 .hero-bg {
   position: absolute; inset: 0;
-  background: url('hero-bg.png') center bottom / contain no-repeat #ececec;
-  animation: heroZoom 20s ease-in-out infinite alternate;
+  background: #ececec;
+}
+@media (min-width: 769px) {
+  .hero-bg { background: #ececec; }
+}
+@media (max-width: 768px) {
+  .hero-bg {
+    background: url('hero-bg.png') center bottom / contain no-repeat #ececec;
+    animation: heroZoom 20s ease-in-out infinite alternate;
+  }
 }
 .hero-bg video {
   position: absolute; inset: 0;
