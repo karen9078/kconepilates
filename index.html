@@ -237,6 +237,9 @@ nav.scrolled { box-shadow: 0 1px 20px rgba(0,0,0,0.06); }
   object-fit: cover;
   animation: heroZoom 20s ease-in-out infinite alternate;
 }
+@media (max-width: 768px) {
+  .hero-bg video { display: none; }
+}
 
 @keyframes heroZoom {
   from { transform: scale(1); }
@@ -905,10 +908,7 @@ footer {
 <!-- HERO -->
 <div class="hero" id="home">
   <div class="hero-bg">
-    <video id="heroVideo" autoplay muted loop playsinline preload="auto">
-  <source src="hero-video-mobile.mp4" media="(max-width: 768px)" type="video/mp4">
-  <source src="hero-video-compressed.mp4" type="video/mp4">
-</video>
+    <video id="heroVideo" src="hero-video-compressed.mp4" autoplay muted loop playsinline preload="auto"></video>
   </div>
   <div class="hero-left">
     <div class="hero-tag">TO BE UNDEFINED · EST. 2018</div>
