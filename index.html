@@ -905,7 +905,7 @@ footer {
 <!-- HERO -->
 <div class="hero" id="home">
   <div class="hero-bg">
-    <video id="heroVideo" src="hero-video-compressed.mp4" autoplay muted playsinline poster="hero-bg.png"></video>
+    <video id="heroVideo" src="hero-video-compressed.mp4" autoplay muted playsinline preload="auto" poster="hero-bg.png"></video>
   </div>
   <div class="hero-left">
     <div class="hero-tag">TO BE UNDEFINED · EST. 2018</div>
@@ -1537,4 +1537,4 @@ function closeVideo() {
   </div>
 </div>
 
-<script>var hv=document.getElementById("heroVideo");if(hv){hv.addEventListener("timeupdate",function(){if(this.currentTime>=this.duration-0.35)this.currentTime=0;});}</script></body></html>
+<script>var hv=document.getElementById("heroVideo");if(hv){hv.play();hv.addEventListener("timeupdate",function(){if(this.currentTime>=this.duration-0.35)this.currentTime=0;});}</script></body></html>
