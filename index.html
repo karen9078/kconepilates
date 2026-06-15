@@ -13,11 +13,14 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "LocalBusiness"],
   "name": "KCONE Pilates",
   "url": "https://kconepilates.com",
   "logo": "https://kconepilates.com/images/logo.png",
-  "description": "Professional Pilates equipment manufacturer and OEM supplier based in China.",
+  "image": "https://kconepilates.com/shop/Full Studio Setup.png",
+  "description": "Professional Pilates equipment manufacturer and OEM supplier based in China. Factory-direct reformers, Cadillacs, Wunda Chairs, ladder barrels and full studio solutions for studios and distributors worldwide.",
+  "foundingDate": "2018",
+  "knowsAbout": ["Pilates Equipment", "Pilates Reformer", "OEM Manufacturing", "Fitness Equipment"],
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+86-185-5050-8086",
@@ -31,7 +34,19 @@
   },
   "sameAs": [
     "https://wa.me/8618550508086"
-  ]
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "KCONE Pilates Equipment",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Reformer H02", "description": "Professional Pilates Reformer, 75kg, 130kg load capacity, 5-spring system, patented 360° silent pulley"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Wunda Chair W01", "description": "Studio Pilates Wunda Chair, 45kg, carbon steel frame, 4-parameter spring system"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Cadillac K21", "description": "Full Pilates Cadillac, 95kg, German-made springs, 304 stainless steel frame"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Ladder Barrel T02", "description": "Professional Pilates Ladder Barrel, 50kg, carbon steel, 5-gear barrel adjustment"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Tower H21", "description": "Pilates Tower Wall Unit, 35kg, 304 SS round tube, 8-parameter spring system"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "PowerHouse RX", "description": "Upright Dual-Rail Rehab Pilates Trainer, KCONE × PHI PILATES, YUR® RX-RX01, multi-patent technology"}}
+    ]
+  }
 }
 </script>
 
@@ -40,15 +55,53 @@
 <meta property="og:title" content="KCONE — Professional Pilates Equipment Manufacturer">
 <meta property="og:description" content="Factory-direct Pilates equipment manufacturer. OEM/ODM for reformers, Cadillacs, chairs & more. Global shipping.">
 <meta property="og:url" content="https://kconepilates.com/">
-<meta property="og:image" content="https://kconepilates.com/images/logo.png">
+<meta property="og:image" content="https://kconepilates.com/shop/Full Studio Setup.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_US">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="KCONE — Professional Pilates Equipment Manufacturer">
 <meta name="twitter:description" content="Factory-direct Pilates equipment. OEM/ODM available. Global shipping since 2018.">
-<meta name="twitter:image" content="https://kconepilates.com/images/logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com/">
+<meta name="twitter:image" content="https://kconepilates.com/shop/Full Studio Setup.png">
+<meta name="author" content="KCONE Pilates">
+<meta name="geo.region" content="CN">
+<meta name="geo.placename" content="China">
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does KCONE offer OEM and private label Pilates equipment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. KCONE offers full OEM and ODM services including custom colors, logo branding, packaging, and structural modifications for distributors, chain studios, and fitness brands."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What Pilates equipment does KCONE manufacture?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "KCONE manufactures a full range of professional Pilates equipment including reformers (H02, KC01, M01), Cadillac (K21), Wunda Chair (W01), Ladder Barrel (T02), Tower (H21), Spine Corrector (J01), and the new PowerHouse RX upright trainer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does KCONE ship Pilates equipment internationally?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. KCONE ships globally under FOB trade terms with professional wooden crate packaging. We have served studios and distributors worldwide since 2018."
+      }
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
@@ -747,7 +800,7 @@ footer {
 
 <!-- NAV -->
 <nav id="main-nav">
-  <a href="index.html#home" class="nav-logo"><img src="images/logo.png" alt="KC ONE" style="height:36px;width:auto;display:block;"></a>
+  <a href="index.html#home" class="nav-logo"><img src="images/logo.png" alt="KCONE Pilates — Professional Equipment Manufacturer & OEM Supplier" style="height:36px;width:auto;display:block;"></a>
 
   <div class="nav-center">
 
@@ -768,7 +821,7 @@ footer {
             <div class="dropdown-col-label">Featured</div>
             <a class="dropdown-img-card" href="index.html#products" onclick="closeDrop()">
               <div class="dropdown-img-wrap">
-                <img src="shop/Full Studio Setup.png" alt="Full Studio Setup">
+                <img src="shop/Full Studio Setup.png" alt="KCONE Full Studio Pilates Equipment Setup — Professional OEM Manufacturer">
               </div>
               <div class="dropdown-item-name">Full Studio Setup</div>
               <div class="dropdown-item-sub">Professional Reformer Line</div>
@@ -780,7 +833,7 @@ footer {
             <div class="dropdown-col-label">New Arrival</div>
             <a class="dropdown-img-card" href="rx-detail.html" onclick="closeDrop()">
               <div class="dropdown-img-wrap">
-                <img src="shop/PowerHouse RX.jpg" alt="PowerHouse RX">
+                <img src="shop/PowerHouse RX.jpg" alt="KCONE PowerHouse RX — Upright Dual-Rail Rehab Pilates Trainer, New 2025">
               </div>
               <div class="dropdown-item-name">PowerHouse RX</div>
               <div class="dropdown-item-sub">YUR® RX-RX01 · New 2025</div>
@@ -905,6 +958,7 @@ footer {
       <em>and Art</em><br>
       Coexist.
     </h1>
+    <p style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">KCONE — Professional Pilates Equipment Manufacturer &amp; OEM Supplier. Factory-direct reformers, Cadillacs, Wunda Chairs, ladder barrels and more for studios and distributors worldwide.</p>
     <p class="hero-desc">
       Professional-grade Pilates equipment for studios, distributors, and serious practitioners worldwide. Every detail — down to the last screw.
     </p>
@@ -920,7 +974,7 @@ footer {
 <section class="shop-section" id="products">
   <div class="section-eyebrow">PRODUCT COLLECTION</div>
   <div class="shop-intro fade-in" style="transition-delay: 0s;">
-    <h2 class="shop-heading">Full Studio<br>Equipment Line</h2>
+    <h2 class="shop-heading">Full Studio<br>Equipment Line — Professional Pilates Equipment</h2>
     <p class="shop-note">B2B wholesale · Custom colors · Contact for pricing</p>
   </div>
 
@@ -930,10 +984,10 @@ footer {
       <div class="product-card-num">01</div>
       <div class="product-img-wrap">
         <a href="h02-detail.html">
-        <img src="Reformer H02/H02-black.png" alt="Reformer H02">
+        <img src="Reformer H02/H02-black.png" alt="KCONE Reformer H02 — Professional Pilates Reformer, Factory Direct">
       </a>
       </div>
-      <div class="product-card-name">Reformer H02</div>
+      <h3 class="product-card-name">Reformer H02</h3>
       <div class="product-card-code">H02 · L2360 × W600–850 × H360mm</div>
       <div class="product-card-specs">75 kg · 130 kg load capacity<br>10-gear handle · 5-spring system<br>Patented 360° silent pulley</div>
       <div class="product-card-colors">
@@ -948,10 +1002,10 @@ footer {
       <div class="product-card-num">02</div>
       <div class="product-img-wrap">
                 <a href="w01-detail.html">
-        <img src="Wunda chair W01 18.36.10/W01-main.png" alt="Wunda Chair W01">
+        <img src="Wunda chair W01 18.36.10/W01-main.png" alt="KCONE Wunda Chair W01 — Studio Pilates Chair, OEM Available">
       </a>
       </div>
-      <div class="product-card-name">Wunda Chair W01</div>
+      <h3 class="product-card-name">Wunda Chair W01</h3>
       <div class="product-card-code">W01 · L780 × W700 × H605mm</div>
       <div class="product-card-specs">45 kg · Carbon steel frame<br>5 handle positions · 3 spring tensions<br>4-parameter spring system</div>
       <div class="product-card-colors">
@@ -966,10 +1020,10 @@ footer {
       <div class="product-card-num">03</div>
       <div class="product-img-wrap">
                 <a href="t02-detail.html">
-        <img src="Ladder Barrel  T02/T02-main.png" alt="Ladder Barrel T02">
+        <img src="Ladder Barrel  T02/T02-main.png" alt="KCONE Ladder Barrel T02 — Professional Pilates Barrel, Wholesale">
       </a>
       </div>
-      <div class="product-card-name">Ladder Barrel T02</div>
+      <h3 class="product-card-name">Ladder Barrel T02</h3>
       <div class="product-card-code">T02 · L1220 × W640 × H980mm</div>
       <div class="product-card-specs">50 kg · Carbon steel<br>5-gear barrel adjustment<br>42mm coated round tube handles</div>
       <div class="product-card-colors">
@@ -984,10 +1038,10 @@ footer {
       <div class="product-card-num">04</div>
       <div class="product-img-wrap">
         <a href="k21-detail.html">
-        <img src="Cadillac K21/K21-main.png" alt="Cadillac K21">
+        <img src="Cadillac K21/K21-main.png" alt="KCONE Cadillac K21 — Full Pilates Cadillac, Factory Direct">
       </a>
       </div>
-      <div class="product-card-name">Cadillac K21</div>
+      <h3 class="product-card-name">Cadillac K21</h3>
       <div class="product-card-code">K21 · L2200 × W740 × H2030mm</div>
       <div class="product-card-specs">95 kg · German-made springs<br>10-parameter spring system<br>304 stainless steel frame</div>
       <div class="product-card-colors">
@@ -1002,10 +1056,10 @@ footer {
       <div class="product-card-num">05</div>
       <div class="product-img-wrap">
         <a href="h21-detail.html">
-        <img src="Tower H21/H21-main.png" alt="Tower H21">
+        <img src="Tower H21/H21-main.png" alt="KCONE Tower H21 — Pilates Tower Wall Unit, OEM Supplier">
       </a>
       </div>
-      <div class="product-card-name">Tower H21</div>
+      <h3 class="product-card-name">Tower H21</h3>
       <div class="product-card-code">H21 · L2400 × W600 × H1920mm</div>
       <div class="product-card-specs">35 kg · 304 SS round tube<br>8-parameter spring system<br>16 stainless steel hooks</div>
       <div class="product-card-colors">
@@ -1020,10 +1074,10 @@ footer {
       <div class="product-card-num">06</div>
       <div class="product-img-wrap">
         <a href="j01-detail.html">
-        <img src="Spine Corrector J01/J01-main.png" alt="Spine Corrector J01">
+        <img src="Spine Corrector J01/J01-main.png" alt="KCONE Spine Corrector J01 — Pilates Arc Barrel, Professional Grade">
       </a>
       </div>
-      <div class="product-card-name">Spine Corrector J01</div>
+      <h3 class="product-card-name">Spine Corrector J01</h3>
       <div class="product-card-code">J01 · L930 × W400 × H350mm</div>
       <div class="product-card-specs">11 kg<br>Premium imported leather wrap<br>Ergonomic carry handle</div>
       <div class="product-card-colors">
@@ -1036,10 +1090,10 @@ footer {
       <div class="product-card-num">07</div>
       <div class="product-img-wrap">
         <a href="kc01-detail.html">
-        <img src="KC01/KC01-main.png" alt="Reformer KC01">
+        <img src="KC01/KC01-main.png" alt="KCONE Reformer KC01 — Signature Pilates Reformer, Studio Equipment">
       </a>
       </div>
-      <div class="product-card-name">Reformer KC01</div>
+      <h3 class="product-card-name">Reformer KC01</h3>
       <div class="product-card-code">KC01 · L2390 × W600 × H340mm</div>
       <div class="product-card-specs">65 kg · 130 kg load capacity<br>7-gear handle · 5-spring system<br>KCONE signature blue rope</div>
       <div class="product-card-colors">
@@ -1053,10 +1107,10 @@ footer {
       <div class="product-card-num">08</div>
       <div class="product-img-wrap">
         <a href="m01-detail.html">
-        <img src="KCONE M01/M01-main.jpg" alt="Reformer M01">
+        <img src="KCONE M01/M01-main.jpg" alt="KCONE Reformer M01 — Anodized Aluminum Pilates Reformer, Wholesale">
       </a>
       </div>
-      <div class="product-card-name">Reformer M01</div>
+      <h3 class="product-card-name">Reformer M01</h3>
       <div class="product-card-code">M01 · L2470 × W580 × H240/430mm</div>
       <div class="product-card-specs">65 kg · Anodized aluminum finish<br>Merrithew SPX compatible<br>Standard + High-leg versions</div>
       <div class="product-card-colors">
@@ -1070,10 +1124,10 @@ footer {
       <div class="product-card-num">09</div>
       <div class="product-img-wrap">
         <a href="mw01-detail.html">
-        <img src="Chair MW01/MW01-main.png" alt="Chair MW01">
+        <img src="Chair MW01/MW01-main.png" alt="KCONE Chair MW01 — Natural Wood Pilates Chair, Custom Branding">
       </a>
       </div>
-      <div class="product-card-name">Chair MW01</div>
+      <h3 class="product-card-name">Chair MW01</h3>
       <div class="product-card-code">MW01 · L800 × W545 × H620mm</div>
       <div class="product-card-specs">36 kg · Natural wood + Aluminum<br>8 handle height positions<br>Custom branding strap</div>
       <div class="product-card-colors">
@@ -1240,7 +1294,7 @@ footer {
 <!-- WHY CHOOSE US -->
 <section id="why-choose-us" style="background:var(--white); padding:56px 48px;">
   <div class="section-eyebrow" style="justify-content:center;">WHY CHOOSE KCONE</div>
-  <h2 style="font-family:'Cormorant Garamond',serif; font-size:36px; font-weight:300; text-align:center; margin:16px 0 40px;">Direct from the Manufacturer</h2>
+  <h2 style="font-family:'Cormorant Garamond',serif; font-size:36px; font-weight:300; text-align:center; margin:16px 0 40px;">Direct from the Manufacturer — China Pilates Equipment Factory</h2>
   <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:32px;">
     <div class="fade-in" style="transition-delay:0s; background:var(--off); padding:24px; border-radius:1px; border-top:3px solid #2d3436; position:relative;">
       <div style="font-size:28px; font-weight:200; color:var(--gray-light); margin-bottom:8px; display:flex; align-items:center; gap:8px;">01<svg width="20" height="20" viewBox="0 0 24 24" fill="#2d3436"><path d="M12 3L2 9v2l10 5 10-5V9l-10-6zM2 18l10 5 10-5v-3l-10 5-10-5v3z"/></svg></div>
@@ -1389,14 +1443,14 @@ footer {
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo"><img src="黑色背景的蓝色符号logo.png" alt="KCONE" style="height:34px;width:auto;"></div>
+  <div class="footer-logo"><img src="黑色背景的蓝色符号logo.png" alt="KCONE Professional Pilates Equipment Manufacturer" style="height:34px;width:auto;"></div>
   <div class="footer-tagline">TO BE UNDEFINED · PROFESSIONAL PILATES EQUIPMENT</div>
   <div class="footer-links">
     <a href="mailto:karen@kconepilates.com" style="color:rgba(245,244,240,0.5);text-decoration:none;">Karen@kconepilates.com</a>
     <span style="color:rgba(245,244,240,0.2);">|</span>
     <a href="https://wa.me/8618550508086" target="_blank" rel="noopener" style="color:rgba(245,244,240,0.5);text-decoration:none;">WhatsApp</a>
   </div>
-  <div>© 2018 KCONE. All rights reserved.</div>
+  <div>© 2018–2025 KCONE. All rights reserved.</div>
 </footer>
 
 <script>
@@ -1528,7 +1582,7 @@ function closeVideo() {
 <!-- Feature Image Lightbox -->
 <div class="video-overlay" id="featureLightbox" onclick="closeFeatureImg()">
   <div class="video-modal" onclick="event.stopPropagation()" style="background:transparent;max-width:800px;position:relative;overflow:visible;">
-    <img id="featureLightboxImg" src="" alt="Engineering Standard" style="width:100%;display:block;border-radius:4px;">
+    <img id="featureLightboxImg" src="" alt="KCONE Engineering Standard — Pilates Equipment Quality Detail" style="width:100%;display:block;border-radius:4px;">
     <button onclick="closeFeatureImg()" style="position:fixed;top:20px;right:24px;width:36px;height:36px;font-size:18px;color:#fff;background:rgba(0,0,0,0.55);border:none;border-radius:50%;cursor:pointer;font-family:'DM Sans',sans-serif;line-height:36px;text-align:center;z-index:10000;transition:background 0.2s;" onmouseover="this.style.background='rgba(0,0,0,0.8)'" onmouseout="this.style.background='rgba(0,0,0,0.55)'">✕</button>
   </div>
 </div>
