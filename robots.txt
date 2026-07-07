@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://kconepilates.com/sitemap.xml
+Sitemap: https://kconepilates.com/video-sitemap.xml
