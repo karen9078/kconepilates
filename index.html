@@ -1753,6 +1753,7 @@ var videoSrcs = {
 function openVideo(id) {
   var overlay = document.getElementById('videoOverlay');
   var video = document.getElementById('modalVideo');
+  video.removeAttribute('poster');
   video.src = videoSrcs[id];
   video.load();
   overlay.classList.add('active');
@@ -1771,7 +1772,7 @@ function closeVideo() {
 <div class="video-overlay" id="videoOverlay" onclick="closeVideo()">
   <div class="video-modal" onclick="event.stopPropagation()">
     <button class="video-close" onclick="closeVideo()">✕</button>
-    <video title="KCONE Pilates Equipment Video" poster="images/hero-poster.jpg" controls autoplay muted playsinline id="modalVideo">
+    <video title="KCONE Pilates Equipment Video" controls autoplay muted playsinline id="modalVideo">
       <source src="" type="video/mp4">
     </video>
   </div>
