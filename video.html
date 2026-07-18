@@ -33,7 +33,7 @@ video {
 </style>
 </head>
 <body>
-  <a href="index.html" class="back-btn" id="backBtn">← BACK TO KCONE</a>
+  <a href="/" class="back-btn" id="backBtn">← BACK TO KCONE</a>
   <video controls autoplay playsinline>
     <source src="" type="video/mp4">
   </video>
@@ -53,9 +53,9 @@ if (id && videos[id]) {
   document.querySelector('video').load();
   // Set back button to return to the right section
   if (id >= 2 && id <= 5) {
-    document.getElementById('backBtn').href = 'index.html#about';
+    document.getElementById('backBtn').href = '/#about';
   } else if (id == 6) {
-    document.getElementById('backBtn').href = 'index.html#education';
+    document.getElementById('backBtn').href = '/#education';
   }
 }
 </script>
