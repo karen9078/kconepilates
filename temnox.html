@@ -96,6 +96,12 @@ nav a.active { color: var(--black); font-weight: 600; position: relative; }
   .story-inner { grid-template-columns: 1fr; gap: 24px; }
   .story p { max-width: 100%; }
 }
+@media (max-width: 900px) {
+  .hero { min-height: auto; padding: 84px 20px 36px; }
+  .hero h1 { font-size: 30px; }
+  .hero-sub { font-size: 14px; line-height: 1.65; margin-bottom: 24px; }
+  .hero-slogan { gap: 16px; font-size: 11px; }
+}
 </style>
 <style id="font-compensation">
 /* ── 字体方案 A（Inter）+ 字重与对比度补偿：原 CSS 为细衬线设计 ── */
