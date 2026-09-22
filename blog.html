@@ -3,18 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog — KCONE Pilates</title>
-<meta name="description" content="KCONE Pilates blog — insights on Pilates equipment, studio setup, and industry trends from a factory-direct manufacturer.">
+<title>Professional Pilates Equipment Buying Guides | KCONE</title>
+<meta name="description" content="B2B Pilates equipment buying guides for studios, distributors and training facilities: reformer selection, supplier evaluation, FOB ordering and studio planning.">
 <link rel="canonical" href="https://kconepilates.com/blog">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Blog — KCONE Pilates">
-<meta property="og:description" content="Insights on Pilates equipment, studio setup, and industry trends from a factory-direct manufacturer.">
+<meta property="og:title" content="Professional Pilates Equipment Buying Guides | KCONE">
+<meta property="og:description" content="B2B buying guides for studios, distributors and training facilities evaluating professional Pilates equipment and factory quotations.">
 <meta property="og:url" content="https://kconepilates.com/blog">
 <meta property="og:image" content="https://kconepilates.com/shop/Full Studio Setup.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
@@ -26,71 +27,96 @@
   --border: rgba(15,15,15,0.1);
 }
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   background: var(--white);
   color: var(--black);
   font-size: 15px;
   line-height: 1.6;
 }
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 48px;
-  height: 64px;
-  border-bottom: 1px solid var(--border);
-  background: rgba(250,250,248,0.95);
-}
-nav a {
-  text-decoration: none;
-  color: var(--gray);
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  transition: color 0.2s;
-}
-nav a:hover { color: var(--black); }
-nav a.active { color: var(--black); }
-.nav-links { display: flex; align-items: center; gap: 28px; }
 .page-wrap {
-  max-width: 860px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 48px 24px 80px;
+  padding: 88px 48px 96px;
 }
-.page-header { margin-bottom: 48px; }
+.page-header { margin-bottom: 56px; text-align: center; }
 .page-header h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 42px;
-  font-weight: 300;
-  margin-bottom: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  margin-bottom: 12px;
 }
 .page-header p {
   color: var(--gray);
   font-size: 15px;
+  max-width: 620px;
+  margin: 0 auto;
+}
+.blog-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.blog-side {
+  position: sticky;
+  top: 32px;
+}
+.blog-side-fig {
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  background: var(--off);
+}
+.blog-side-fig img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.blog-side .side-label {
+  font-size: 12px;
+  color: var(--gray-light);
+  letter-spacing: 0.14em;
+  margin-bottom: 8px;
+}
+.blog-side .side-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+.blog-side .side-note {
+  font-size: 13px;
+  color: var(--gray);
+  line-height: 1.8;
 }
 .post-list { display: flex; flex-direction: column; gap: 0; }
 .post-item {
-  padding: 28px 0;
+  padding: 30px 0;
   border-top: 1px solid var(--border);
   text-decoration: none;
   color: inherit;
   display: block;
-  transition: padding-left 0.2s;
+  transition: opacity 0.2s;
 }
+.post-item:first-child { border-top: none; padding-top: 4px; }
 .post-item:last-child { border-bottom: 1px solid var(--border); }
-.post-item:hover { padding-left: 8px; }
+.post-item:hover { opacity: 0.75; }
 .post-date {
   font-size: 12px;
   color: var(--gray-light);
-  letter-spacing: 0.05em;
-  margin-bottom: 6px;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
 }
 .post-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 26px;
+  font-family: 'Inter', sans-serif;
+  font-size: 27px;
   font-weight: 400;
-  margin-bottom: 8px;
-  transition: color 0.2s;
+  margin-bottom: 10px;
   line-height: 1.3;
+  transition: color 0.2s;
 }
 .post-item:hover .post-title { color: #555; }
 .post-summary {
@@ -101,14 +127,14 @@ nav a.active { color: var(--black); }
 .post-read {
   font-size: 12px;
   color: var(--black);
-  letter-spacing: 0.08em;
-  margin-top: 10px;
+  letter-spacing: 0.1em;
+  margin-top: 12px;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
 }
 .post-read::after { content: '→'; transition: transform 0.2s; }
-.post-item:hover .post-read::after { transform: translateX(3px); }
+.post-item:hover .post-read::after { transform: translateX(4px); }
 
 .loading, .empty, .error {
   text-align: center;
@@ -124,107 +150,315 @@ nav a.active { color: var(--black); }
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
-@keyframes spin { to { transform: rotate(360deg); } }
-
-footer {
-  background: var(--black);
-  color: rgba(245,244,240,0.3);
-  padding: 28px 48px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 11px;
+@keyframes spin { to { transform: rotate(360deg); } }@media (max-width: 768px){
+  .page-wrap { padding: 88px 20px 60px; }
+  .page-header h1 { font-size: 34px; }
+  .post-title { font-size: 24px; }
+  .blog-layout { grid-template-columns: 1fr; gap: 40px; }
+  .blog-side { position: static; }
+  .blog-side-fig { aspect-ratio: 16/9; }}</style>
+<style id="font-compensation">
+/* ── 字体方案 A（Inter）+ 字重与对比度补偿：原 CSS 为细衬线设计 ── */
+:root {
+  --gray-color: #6b6963;
 }
-.footer-logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 17px;
-  color: rgba(245,244,240,0.55);
-  letter-spacing: 0.12em;
+body, p, li, td, th, input, select, textarea, button {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
-@media (max-width: 768px) {
-  nav { padding: 0 20px; }
-  .page-wrap { padding: 32px 20px 60px; }
-  .page-header h1 { font-size: 32px; }
-  .post-title { font-size: 22px; }
-  .post-item:hover { padding-left: 4px; }
-}
-</style>
+h1, h2, h3, h4 { font-weight: 500; }
+strong, b { font-weight: 600; }
+h1 { letter-spacing: -0.022em; }
+h2, h3 { letter-spacing: -0.015em; }
+/* 浅灰文字加深一档（提升对比度） */
+:root { --gray: #6b6963; --gray-light: #9c9a92; }</style>
 </head>
 <body>
+<nav id="main-nav">
+  <a href="/#home" class="nav-logo"><img src="images/logo.png" width="616" height="128" alt="KCONE Pilates — Professional Equipment Manufacturer Supplier" style="height:36px;width:auto;display:block;"></a>
 
-<nav>
-  <a href="/">KCONE</a>
-  <div class="nav-links">
-    <a href="/">SHOP</a>
-    <a href="rx-detail">NEW ARRIVAL</a>
-    <a href="blog" class="active">BLOG</a>
-    <a href="/#contact">CONTACT</a>
+  <div class="nav-center">
+
+    <!-- SHOP with dropdown -->
+    <div class="nav-item">
+      <div class="nav-link active">
+        SHOP
+        <svg viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
+        </svg>
+      </div>
+
+      <div class="shop-dropdown">
+        <div class="dropdown-inner">
+
+          <!-- Col 1: Featured image -->
+          <div class="dropdown-col">
+            <div class="dropdown-col-label">Featured</div>
+            <a class="dropdown-img-card" href="/#products" onclick="closeDrop()">
+              <div class="dropdown-img-wrap">
+                <img src="optimized/full-studio-setup-900.jpg" srcset="optimized/full-studio-setup-480.jpg 480w, optimized/full-studio-setup-900.jpg 900w" sizes="(max-width: 900px) 100vw, 33vw" width="1838" height="1150" loading="lazy" decoding="async" alt="KCONE Full Studio Pilates Equipment Setup">
+              </div>
+              <div class="dropdown-item-name">Full Studio Setup</div>
+              <div class="dropdown-item-sub">Professional Reformer Line</div>
+            </a>
+            <a class="dropdown-img-card" href="rx-detail" onclick="closeDrop()" style="margin-top:14px;">
+              <div class="dropdown-img-wrap">
+                <img src="optimized/powerhouse-rx-900.jpg" srcset="optimized/powerhouse-rx-480.jpg 480w, optimized/powerhouse-rx-900.jpg 900w" sizes="(max-width: 900px) 100vw, 33vw" width="4000" height="2252" loading="lazy" decoding="async" alt="KCONE PowerHouse RX — Upright Dual-Rail Rehab Pilates Trainer">
+              </div>
+              <div class="dropdown-item-name">PowerHouse RX</div>
+              <div class="dropdown-item-sub">YUR® RX-RX01 · New 2025</div>
+            </a>
+          </div>
+
+          <!-- Col 2: New Arrival — Temnox 在上，RX 在下 -->
+          <div class="dropdown-col">
+            <div class="dropdown-col-label">New Arrival</div>
+            <a class="dropdown-img-card" href="temnox.html" onclick="closeDrop()">
+              <div class="dropdown-img-wrap">
+                <img src="optimized/shop-temnox-900.jpg" srcset="optimized/shop-temnox-480.jpg 480w, optimized/shop-temnox-900.jpg 900w" sizes="(max-width: 900px) 100vw, 33vw" width="900" height="600" loading="lazy" decoding="async" alt="Temnox Collection by KCONE — commercial Pilates equipment line">
+              </div>
+              <div class="dropdown-item-name">Temnox Collection</div>
+              <div class="dropdown-item-sub">The Art of Subtraction · New Line</div>
+            </a>
+          </div>
+
+          <!-- Col 3: Product list -->
+          <div class="dropdown-col">
+            <div class="dropdown-col-label">All Products</div>
+            <div class="dropdown-list">
+              <a class="dropdown-list-item" href="tsh-detail" onclick="closeDrop()">
+                <span>Reformer TSH</span>
+                <span class="dropdown-list-item-code">TSH</span>
+              </a>
+              <a class="dropdown-list-item" href="tbh-detail" onclick="closeDrop()">
+                <span>Reformer TBH</span>
+                <span class="dropdown-list-item-code">TBH</span>
+              </a>
+              <a class="dropdown-list-item" href="tbw-detail" onclick="closeDrop()">
+                <span>Wunda Chair TBW</span>
+                <span class="dropdown-list-item-code">TBW</span>
+              </a>
+              <a class="dropdown-list-item" href="tbt-detail" onclick="closeDrop()">
+                <span>Ladder Barrel TBT</span>
+                <span class="dropdown-list-item-code">TBT</span>
+              </a>
+              <a class="dropdown-list-item" href="tbk-detail" onclick="closeDrop()">
+                <span>Cadillac TBK</span>
+                <span class="dropdown-list-item-code">TBK</span>
+              </a>
+              <a class="dropdown-list-item" href="tbht-detail" onclick="closeDrop()">
+                <span>Temnox Half Tower TBHT</span>
+                <span class="dropdown-list-item-code">TBHT</span>
+              </a>
+              <a class="dropdown-list-item" href="tbj-detail" onclick="closeDrop()">
+                <span>Temnox Spine Corrector TBJ</span>
+                <span class="dropdown-list-item-code">TBJ</span>
+              </a>
+              <a class="dropdown-list-item" href="rx-detail" onclick="closeDrop()">
+                <span>PowerHouse RX</span>
+                <span class="dropdown-list-item-code">RX01</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+        <div class="dropdown-footer">
+          <span class="dropdown-footer-text">B2B wholesale · Standard color options · Factory direct</span>
+          <a class="dropdown-footer-link" href="/#contact" onclick="closeDrop()">GET A QUOTE →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <a class="nav-link" href="temnox.html">NEW ARRIVAL</a>
+    </div>
+
+    <div class="nav-item">
+      <a class="nav-link active" href="blog">BLOG</a>
+    </div>
+
+    <div class="nav-item">
+      <a class="nav-link" href="pilates-equipment-buying-guide">BUYING GUIDE</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="/#education">EDUCATION</a>
+    </div>
+
+    <div class="nav-item">
+      <a class="nav-link" href="/#about">ABOUT</a>
+    </div>
   </div>
+
+  <div class="nav-right">
+    <a href="/#contact" class="nav-cta">INQUIRE NOW</a>
+  </div>
+  <!-- Hamburger (mobile only) -->
+  <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
 
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-inner">
+    <div class="mobile-menu-section">
+      <div class="mobile-menu-label">Products</div>
+      <a class="mobile-menu-link" href="temnox.html" onclick="toggleMenu()" style="font-weight:600;">Temnox Collection ↗</a>
+      <a class="mobile-menu-link" href="tsh-detail" onclick="toggleMenu()">Reformer TSH</a>
+      <a class="mobile-menu-link" href="tbh-detail" onclick="toggleMenu()">Reformer TBH</a>
+      <a class="mobile-menu-link" href="tbw-detail" onclick="toggleMenu()">Wunda Chair TBW</a>
+      <a class="mobile-menu-link" href="tbt-detail" onclick="toggleMenu()">Ladder Barrel TBT</a>
+      <a class="mobile-menu-link" href="tbk-detail" onclick="toggleMenu()">Cadillac TBK</a>
+      <a class="mobile-menu-link" href="tbht-detail" onclick="toggleMenu()">Temnox Half Tower TBHT</a>
+      <a class="mobile-menu-link" href="tbj-detail" onclick="toggleMenu()">Temnox Spine Corrector TBJ</a>
+      <a class="mobile-menu-link" href="rx-detail" onclick="toggleMenu()">PowerHouse RX</a>
+    </div>
+    <div class="mobile-menu-section">
+      <div class="mobile-menu-label">Navigate</div>
+      <a class="mobile-menu-link" href="temnox.html" onclick="toggleMenu()">NEW ARRIVAL</a>
+      <a class="mobile-menu-link" href="blog" onclick="toggleMenu()">BLOG</a>
+      <a class="mobile-menu-link" href="pilates-equipment-buying-guide" onclick="toggleMenu()">BUYING GUIDE</a>
+      <a class="mobile-menu-link" href="/#education" onclick="toggleMenu()">EDUCATION</a>
+      <a class="mobile-menu-link" href="/#about" onclick="toggleMenu()">ABOUT</a>
+      <a class="mobile-menu-link" href="/#contact" onclick="toggleMenu()">CONTACT</a>
+    </div>
+    <a href="/#contact" class="mobile-menu-cta" onclick="toggleMenu()">INQUIRE NOW</a>
+  </div>
+</div>
+
 <div class="page-wrap">
+  <a href="/" class="back-link"><svg width="14" height="10" viewBox="0 0 14 10" aria-hidden="true"><path d="M5 1L1 5l4 4" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round"/><path d="M1 5h12" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg>BACK TO HOME</a>
   <div class="page-header">
     <h1>Blog</h1>
     <p>Pilates equipment insights, studio tips, and industry stories from the KCONE team.</p>
   </div>
 
-  <div id="loading" class="loading">
-    <div class="spinner"></div>
-    Loading articles...
+  <div class="blog-layout">
+    <aside class="blog-side">
+      <div class="blog-side-fig">
+        <img src="optimized/blog-side-900.jpg" srcset="optimized/blog-side-480.jpg 480w, optimized/blog-side-900.jpg 900w, optimized/blog-side-1200.jpg 1200w" sizes="(max-width: 900px) 100vw, 320px" width="900" height="1350" loading="lazy" decoding="async" alt="KCONE Temnox Pilates equipment collection">
+      </div>
+      <p class="side-note">Guidance for studios, distributors and training facilities sourcing professional Pilates equipment factory-direct.</p>
+    </aside>
+
+    <div class="post-list" style="margin-bottom:32px;">
+        <a class="post-item" href="kcone-vs-balanced-body-merrithew">
+      <div class="post-date">EQUIPMENT COMPARISON</div>
+      <h2 class="post-title">KCONE vs Balanced Body vs Merrithew: How to Compare Professional Pilates Reformers</h2>
+      <p class="post-summary">An objective comparison of professional Pilates reformers across the three brands — build, channel, price positioning and how to compare what actually matters.</p>
+      <span class="post-read">Read article</span>
+    </a>
+    <a class="post-item" href="what-does-commercial-grade-pilates-equipment-mean">
+      <div class="post-date">EQUIPMENT STANDARDS</div>
+      <h2 class="post-title">What Does Commercial-Grade Mean in Pilates Equipment?</h2>
+      <p class="post-summary">What commercial-grade means in professional Pilates equipment — frames, springs, bearings, upholstery and the checks behind the label.</p>
+      <span class="post-read">Read article</span>
+    </a>
+    <a class="post-item" href="commercial-pilates-equipment-rfq">
+      <div class="post-date">B2B PROCUREMENT</div>
+      <h2 class="post-title">What Should Be Included in a Professional Pilates Equipment RFQ?</h2>
+      <p class="post-summary">A complete request-for-quotation field checklist for overseas buyers sourcing professional Pilates equipment factory-direct on FOB Shanghai or DDU terms.</p>
+      <span class="post-read">Read article</span>
+    </a>
+    <a class="post-item" href="pilates-equipment-mix-for-new-studio">
+      <div class="post-date">STUDIO PLANNING</div>
+      <h2 class="post-title">How to Choose a Pilates Equipment Mix for a New Studio</h2>
+      <p class="post-summary">A decision framework for your first equipment mix — reformers, Cadillacs, chairs, towers, barrels and spine correctors — matched to class type, client profile and budget.</p>
+      <span class="post-read">Read article</span>
+    </a>
+    <a class="post-item" href="factory-brand-or-odm-pilates-equipment">
+      <div class="post-date">PARTNERSHIP &amp; OEM/ODM</div>
+      <h2 class="post-title">Factory-Brand, OEM or ODM Pilates Equipment: How to Choose the Right Partnership Model</h2>
+      <p class="post-summary">How studios, distributors and training groups choose between factory-brand equipment, OEM cooperation and ODM development with a manufacturer.</p>
+      <span class="post-read">Read article</span>
+    </a>
+    <a class="post-item" href="pilates-equipment-replacement-guide">
+      <div class="post-date">EQUIPMENT LIFECYCLE</div>
+      <h2 class="post-title">How to Plan Pilates Equipment Replacement and Expansion</h2>
+      <p class="post-summary">A planning framework for studios and distributors managing equipment lifecycles — when to replace, how to phase expansion orders, and how to budget renewal.</p>
+      <span class="post-read">Read article</span>
+    </a>
+    <a class="post-item" href="pilates-equipment-distributor-product-range">
+      <div class="post-date">DISTRIBUTOR STRATEGY</div>
+      <h2 class="post-title">How Pilates Equipment Distributors Can Build a Sellable Product Range</h2>
+      <p class="post-summary">A practical framework for distributors building a sellable Pilates equipment range — client segments, category tiers, selling materials and reorder planning.</p>
+      <span class="post-read">Read article</span>
+    </a>
+    <a class="post-item" href="reformer-vs-cadillac">
+      <div class="post-date">EQUIPMENT COMPARISON</div>
+      <h2 class="post-title">Pilates Reformer vs Cadillac: Which Should Your Studio Buy First?</h2>
+      <p class="post-summary">Compare reformer and Cadillac use, class fit, space, cost and revenue role, and get a practical buying order for your studio.</p>
+      <span class="post-read">Read article</span>
+    </a>
+    <a class="post-item" href="how-to-start-a-pilates-studio">
+      <div class="post-date">STUDIO LAUNCH</div>
+      <h2 class="post-title">How to Start a Pilates Studio: Equipment, Layout &amp; Budget</h2>
+      <p class="post-summary">A practical launch guide covering studio format, equipment mix, reformer counts, room layout, budget planning and ordering factory-direct on FOB Shanghai or DDU terms.</p>
+      <span class="post-read">Read article</span>
+    </a>
+    <a class="post-item" href="commercial-pilates-reformer-buying-guide">
+      <div class="post-date">REFORMER BUYING GUIDE</div>
+      <h2 class="post-title">Professional Pilates Reformer Buying Guide for Studios and Distributors</h2>
+      <p class="post-summary">How B2B buyers can compare professional reformers by studio format, daily use, specifications, supplier information, export packaging and quotation requirements.</p>
+      <span class="post-read">Read article</span>
+    </a>
+    <a class="post-item" href="pilates-equipment-distributor-buying-guide">
+      <div class="post-date">DISTRIBUTOR BUYING GUIDE</div>
+      <h2 class="post-title">How Pilates Equipment Distributors Can Evaluate a New Product Line</h2>
+      <p class="post-summary">A practical framework for distributors comparing product clarity, repeat-order potential, supplier support, packaging information and current collection fit.</p>
+      <span class="post-read">Read article</span>
+    </a>
+    <a class="post-item" href="fob-pilates-equipment-ordering-checklist">
+      <div class="post-date">B2B ORDERING</div>
+      <h2 class="post-title">FOB Shanghai or DDU: A Pilates Equipment Ordering Checklist</h2>
+      <p class="post-summary">What overseas buyers should prepare before requesting a factory quotation and arranging handover for professional Pilates equipment.</p>
+      <span class="post-read">Read article</span>
+    </a>
+    <a class="post-item" href="pilates-equipment-buying-guide">
+      <div class="post-date">BUYING GUIDE</div>
+      <h2 class="post-title">Professional Pilates Equipment Buying Guide for Studios</h2>
+      <p class="post-summary">The complete step-by-step guide: studio format, equipment mix, machine counts, room layout, budget, factory checks, quotation details, export packaging and FOB handover.</p>
+      <span class="post-read">Read guide</span>
+    </a>
+    <a class="post-item" href="questions-to-ask-pilates-equipment-manufacturer">
+      <div class="post-date">B2B PURCHASING</div>
+      <h2 class="post-title">8 Questions to Ask a Pilates Equipment Manufacturer Before Ordering</h2>
+      <p class="post-summary">What buyers should confirm about design, specifications, packaging, lead time, OEM and ODM support, and FOB Shanghai or DDU handover.</p>
+      <span class="post-read">Read article</span>
+    </a>
   </div>
-  <div id="empty" class="empty" style="display:none;">
-    <p>No articles yet. Check back soon!</p>
+
   </div>
-  <div id="error" class="error" style="display:none;"></div>
-  <div id="postList" class="post-list" style="display:none;"></div>
+
 </div>
 
 <footer>
-  <div class="footer-logo">KC ONE</div>
-  <div>© 2025 KCONE. All rights reserved.</div>
+  <div class="footer-logo"><img src="黑色背景的蓝色符号logo.png" width="1600" height="1522" loading="lazy" decoding="async" alt="KCONE Professional Pilates Equipment Manufacturer" style="height:34px;width:auto;"></div>
+  <div class="footer-tagline">TO BE UNDEFINED · PROFESSIONAL PILATES EQUIPMENT</div>
+  <div class="footer-links">
+    <a href="mailto:karen@kconepilates.com" style="color:rgba(245,244,240,0.5);text-decoration:none;">Karen@kconepilates.com</a>
+    <span style="color:rgba(245,244,240,0.2);">|</span>
+    <a href="https://wa.me/8618550508086" target="_blank" rel="noopener" style="color:rgba(245,244,240,0.5);text-decoration:none;">WhatsApp</a>
+  </div>
+  <div>© 2018–2026 KCONE. All rights reserved.</div>
 </footer>
 
-<script>
-// ⚠️ 改成你的 Worker 地址
-const RSS_URL = 'https://你的-worker名.用户名.workers.dev';
-
-(async function loadPosts() {
-  try {
-    const res = await fetch(RSS_URL);
-    const data = await res.json();
-
-    document.getElementById('loading').style.display = 'none';
-
-    if (!data.posts || data.posts.length === 0) {
-      document.getElementById('empty').style.display = 'block';
-      return;
-    }
-
-    const list = document.getElementById('postList');
-    list.style.display = 'block';
-
-    data.posts.forEach(post => {
-      const item = document.createElement('a');
-      item.className = 'post-item';
-      item.href = post.link;
-      item.target = '_blank';
-      item.rel = 'noopener';
-      item.innerHTML = `
-        <div class="post-date">${post.date}</div>
-        <h2 class="post-title">${post.title}</h2>
-        ${post.summary ? `<p class="post-summary">${post.summary}</p>` : ''}
-        <span class="post-read">Read more</span>
-      `;
-      list.appendChild(item);
-    });
-  } catch (e) {
-    document.getElementById('loading').style.display = 'none';
-    const err = document.getElementById('error');
-    err.style.display = 'block';
-    err.innerHTML = `<p>Unable to load articles. <a href="https://karentalk.jant.blog" style="color:var(--black);">Visit the blog directly →</a></p>`;
-  }
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+Tawk_API.customStyle = {};
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6a8af739bf875a344567a933/1k0ndbevm';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
+<!--End of Tawk.to Script-->
 
+
+<script src="site.js" defer></script>
 </body>
 </html>

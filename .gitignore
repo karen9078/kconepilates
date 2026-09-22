@@ -21,4 +21,10 @@
 # For future videos over 25MB, add exclusion rules here
 /hero视频.mp4
 .reasonix/
-高德物流系统/
+
+# 私人 / 内部文件（不上线）
+/conflict-coach.html
+/conflict-worker.js
+/_local_server.py
+/_fix_navlinks.py
+/site-map.html

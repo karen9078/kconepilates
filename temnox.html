@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temnox — The Art of Subtraction | KCONE</title>
+<meta name="description" content="Temnox by KCONE — a Pilates equipment line born from 7 years of subtraction. Reliable craft, intuitive use, restrained design. Control is Freedom.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --black: #0f0f0f;
+  --white: #fafaf8;
+  --off: #f2f1ed;
+  --gray: #8a8880;
+  --gray-light: #b8b6b2;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--white);
+  color: var(--black);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* 当前页高亮 */
+nav a.active { color: var(--black); font-weight: 600; position: relative; }
+/* 手机端：隐藏次要导航项，保留 SHOP / TEMNOX */
+@media (max-width: 900px) {
+  .story-inner { grid-template-columns: 1fr; gap: 24px; }
+  .nav-links { gap: 18px; }
+  .nav-links a:nth-child(4), .nav-links a:nth-child(5), .nav-links a:nth-child(6) { display: none; }
+}
+
+
+.hero {
+  position: relative; min-height: 60vh; display: flex; align-items: center;
+  padding: 104px 48px 56px; overflow: hidden; background: #0f0f0f; color: var(--white);
+}
+.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0.50; animation: heroKenBurns 26s ease-in-out infinite alternate; }
+
+@keyframes heroKenBurns {
+  0%   { transform: scale(1.02) translate3d(0, 0, 0); }
+  50%  { transform: scale(1.055) translate3d(-0.8%, -0.5%, 0); }
+  100% { transform: scale(1.09) translate3d(-1.4%, -0.9%, 0); }
+}
+@media (prefers-reduced-motion: reduce) { .hero-bg { animation: none; } }
+
+.hero-inner { position: relative; z-index: 2; max-width: 1100px; margin: 0 auto; width: 100%; }
+.hero-kicker { letter-spacing: 0.28em; font-size: 11px; color: #e3e1db; margin-bottom: 24px; }
+.hero h1 {
+  font-family: 'Inter', sans-serif; font-weight: 500;
+  font-size: clamp(34px, 5.6vw, 60px); line-height: 1.08; margin-bottom: 24px;
+}
+.hero h1 em { font-style: italic; color: #d9c79b; }
+.hero-sub { max-width: 640px; font-size: 15px; color: #f0efeb; font-weight: 500; margin-bottom: 40px; }
+.hero-slogan { display: flex; gap: 32px; flex-wrap: wrap; font-size: 12px; letter-spacing: 0.12em; color: #cfcdc7; }
+.hero-slogan b { display: block; color: var(--white); font-weight: 500; margin-bottom: 2px; }
+
+.story { padding: 40px 48px; max-width: 1200px; margin: 0 auto; text-align: left; }
+.story-inner { display: grid; grid-template-columns: 1.05fr 1fr; gap: 44px; align-items: center; }
+.story-video video { width: 100%; display: block; border-radius: 2px; background: #0f0f0f; }
+.story .label { letter-spacing: 0.28em; font-size: 11px; color: var(--gray); margin-bottom: 20px; }
+.story h2 { font-family: 'Inter', sans-serif; font-weight: 500; font-size: clamp(24px, 3.2vw, 36px); line-height: 1.22; margin-bottom: 16px; }
+.story p { font-size: 15px; line-height: 1.85; color: #4a4946; max-width: 620px; margin: 0 0 12px; font-weight: 500; }
+.story .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 24px; text-align: left; }
+.story .three .item { border-top: 1px solid #dcdad3; padding-top: 16px; }
+.story .three .item h3 { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 20px; margin-bottom: 8px; }
+.story .three .item p { font-size: 13px; color: var(--gray); line-height: 1.7; margin: 0; }
+
+.collection { padding: 0 48px 40px; max-width: 1200px; margin: 0 auto; }
+.collection .label { letter-spacing: 0.28em; font-size: 11px; color: var(--gray); margin-bottom: 12px; text-align: center; }
+.collection h2 { font-family: 'Inter', sans-serif; font-weight: 500; font-size: clamp(24px, 3.2vw, 34px); text-align: center; margin-bottom: 24px; }
+.product-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+.product-card { border: 1px solid #e5e3dc; border-radius: 2px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; }
+.product-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,0.06); }
+.product-card .img-wrap { aspect-ratio: 3/2; background: var(--off); overflow: hidden; }
+.product-card .img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s; }
+.product-card:hover .img-wrap img { transform: scale(1.04); }
+.product-card .body { padding: 16px 18px 20px; }
+.product-card .code { font-size: 10px; letter-spacing: 0.14em; color: var(--gray); margin-bottom: 6px; }
+.product-card .name { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 20px; margin-bottom: 6px; }
+.product-card .desc { font-size: 12px; color: var(--gray); line-height: 1.6; }
+
+.cta { padding: 40px 48px; text-align: center; }
+.cta h2 { font-family: 'Inter', sans-serif; font-weight: 500; font-size: clamp(26px, 4vw, 38px); margin-bottom: 16px; }
+.cta p { color: var(--gray); margin-bottom: 32px; }
+.cta .btn { background: var(--black); color: var(--white); text-decoration: none; padding: 14px 36px; border-radius: 2px; letter-spacing: 0.1em; font-size: 13px; }
+.cta .btn:hover { opacity: 0.88; }@media (max-width: 900px){
+  .product-grid { grid-template-columns: repeat(3,1fr); }
+  .story .three { grid-template-columns: 1fr; gap: 20px; }
+  .hero { padding: 60px 24px; }}@media (max-width: 560px){ .product-grid { grid-template-columns: 1fr; }}@media (max-width: 900px) {
+  .story-inner { grid-template-columns: 1fr; gap: 24px; }
+  .story p { max-width: 100%; }
+}
+</style>
+<style id="font-compensation">
+/* ── 字体方案 A（Inter）+ 字重与对比度补偿：原 CSS 为细衬线设计 ── */
+:root {
+  --gray-color: #6b6963;
+}
+body, p, li, td, th, input, select, textarea, button {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+h1, h2, h3, h4 { font-weight: 500; }
+strong, b { font-weight: 600; }
+h1 { letter-spacing: -0.022em; }
+h2, h3 { letter-spacing: -0.015em; }
+/* 浅灰文字加深一档（提升对比度） */
+:root { --gray: #6b6963; --gray-light: #9c9a92; }</style>
+</head>
+<body>
+<nav id="main-nav">
+  <a href="/#home" class="nav-logo"><img src="images/logo.png" width="616" height="128" alt="KCONE Pilates — Professional Equipment Manufacturer Supplier" style="height:36px;width:auto;display:block;"></a>
+
+  <div class="nav-center">
+
+    <!-- SHOP with dropdown -->
+    <div class="nav-item">
+      <div class="nav-link active">
+        SHOP
+        <svg viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
+        </svg>
+      </div>
+
+      <div class="shop-dropdown">
+        <div class="dropdown-inner">
+
+          <!-- Col 1: Featured image -->
+          <div class="dropdown-col">
+            <div class="dropdown-col-label">Featured</div>
+            <a class="dropdown-img-card" href="/#products" onclick="closeDrop()">
+              <div class="dropdown-img-wrap">
+                <img src="optimized/full-studio-setup-900.jpg" srcset="optimized/full-studio-setup-480.jpg 480w, optimized/full-studio-setup-900.jpg 900w" sizes="(max-width: 900px) 100vw, 33vw" width="1838" height="1150" loading="lazy" decoding="async" alt="KCONE Full Studio Pilates Equipment Setup">
+              </div>
+              <div class="dropdown-item-name">Full Studio Setup</div>
+              <div class="dropdown-item-sub">Professional Reformer Line</div>
+            </a>
+            <a class="dropdown-img-card" href="rx-detail" onclick="closeDrop()" style="margin-top:14px;">
+              <div class="dropdown-img-wrap">
+                <img src="optimized/powerhouse-rx-900.jpg" srcset="optimized/powerhouse-rx-480.jpg 480w, optimized/powerhouse-rx-900.jpg 900w" sizes="(max-width: 900px) 100vw, 33vw" width="4000" height="2252" loading="lazy" decoding="async" alt="KCONE PowerHouse RX — Upright Dual-Rail Rehab Pilates Trainer">
+              </div>
+              <div class="dropdown-item-name">PowerHouse RX</div>
+              <div class="dropdown-item-sub">YUR® RX-RX01 · New 2025</div>
+            </a>
+          </div>
+
+          <!-- Col 2: New Arrival — Temnox 在上，RX 在下 -->
+          <div class="dropdown-col">
+            <div class="dropdown-col-label">New Arrival</div>
+            <a class="dropdown-img-card" href="temnox.html" onclick="closeDrop()">
+              <div class="dropdown-img-wrap">
+                <img src="optimized/shop-temnox-900.jpg" srcset="optimized/shop-temnox-480.jpg 480w, optimized/shop-temnox-900.jpg 900w" sizes="(max-width: 900px) 100vw, 33vw" width="900" height="600" loading="lazy" decoding="async" alt="Temnox Collection by KCONE — commercial Pilates equipment line">
+              </div>
+              <div class="dropdown-item-name">Temnox Collection</div>
+              <div class="dropdown-item-sub">The Art of Subtraction · New Line</div>
+            </a>
+          </div>
+
+          <!-- Col 3: Product list -->
+          <div class="dropdown-col">
+            <div class="dropdown-col-label">All Products</div>
+            <div class="dropdown-list">
+              <a class="dropdown-list-item" href="tsh-detail" onclick="closeDrop()">
+                <span>Reformer TSH</span>
+                <span class="dropdown-list-item-code">TSH</span>
+              </a>
+              <a class="dropdown-list-item" href="tbh-detail" onclick="closeDrop()">
+                <span>Reformer TBH</span>
+                <span class="dropdown-list-item-code">TBH</span>
+              </a>
+              <a class="dropdown-list-item" href="tbw-detail" onclick="closeDrop()">
+                <span>Wunda Chair TBW</span>
+                <span class="dropdown-list-item-code">TBW</span>
+              </a>
+              <a class="dropdown-list-item" href="tbt-detail" onclick="closeDrop()">
+                <span>Ladder Barrel TBT</span>
+                <span class="dropdown-list-item-code">TBT</span>
+              </a>
+              <a class="dropdown-list-item" href="tbk-detail" onclick="closeDrop()">
+                <span>Cadillac TBK</span>
+                <span class="dropdown-list-item-code">TBK</span>
+              </a>
+              <a class="dropdown-list-item" href="tbht-detail" onclick="closeDrop()">
+                <span>Temnox Half Tower TBHT</span>
+                <span class="dropdown-list-item-code">TBHT</span>
+              </a>
+              <a class="dropdown-list-item" href="tbj-detail" onclick="closeDrop()">
+                <span>Temnox Spine Corrector TBJ</span>
+                <span class="dropdown-list-item-code">TBJ</span>
+              </a>
+              <a class="dropdown-list-item" href="rx-detail" onclick="closeDrop()">
+                <span>PowerHouse RX</span>
+                <span class="dropdown-list-item-code">RX01</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+        <div class="dropdown-footer">
+          <span class="dropdown-footer-text">B2B wholesale · Standard color options · Factory direct</span>
+          <a class="dropdown-footer-link" href="/#contact" onclick="closeDrop()">GET A QUOTE →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <a class="nav-link" href="temnox.html">NEW ARRIVAL</a>
+    </div>
+
+    <div class="nav-item">
+      <a class="nav-link" href="blog">BLOG</a>
+    </div>
+
+    <div class="nav-item">
+      <a class="nav-link" href="pilates-equipment-buying-guide">BUYING GUIDE</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="/#education">EDUCATION</a>
+    </div>
+
+    <div class="nav-item">
+      <a class="nav-link" href="/#about">ABOUT</a>
+    </div>
+  </div>
+
+  <div class="nav-right">
+    <a href="/#contact" class="nav-cta">INQUIRE NOW</a>
+  </div>
+  <!-- Hamburger (mobile only) -->
+  <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-inner">
+    <div class="mobile-menu-section">
+      <div class="mobile-menu-label">Products</div>
+      <a class="mobile-menu-link" href="temnox.html" onclick="toggleMenu()" style="font-weight:600;">Temnox Collection ↗</a>
+      <a class="mobile-menu-link" href="tsh-detail" onclick="toggleMenu()">Reformer TSH</a>
+      <a class="mobile-menu-link" href="tbh-detail" onclick="toggleMenu()">Reformer TBH</a>
+      <a class="mobile-menu-link" href="tbw-detail" onclick="toggleMenu()">Wunda Chair TBW</a>
+      <a class="mobile-menu-link" href="tbt-detail" onclick="toggleMenu()">Ladder Barrel TBT</a>
+      <a class="mobile-menu-link" href="tbk-detail" onclick="toggleMenu()">Cadillac TBK</a>
+      <a class="mobile-menu-link" href="tbht-detail" onclick="toggleMenu()">Temnox Half Tower TBHT</a>
+      <a class="mobile-menu-link" href="tbj-detail" onclick="toggleMenu()">Temnox Spine Corrector TBJ</a>
+      <a class="mobile-menu-link" href="rx-detail" onclick="toggleMenu()">PowerHouse RX</a>
+    </div>
+    <div class="mobile-menu-section">
+      <div class="mobile-menu-label">Navigate</div>
+      <a class="mobile-menu-link" href="temnox.html" onclick="toggleMenu()">NEW ARRIVAL</a>
+      <a class="mobile-menu-link" href="blog" onclick="toggleMenu()">BLOG</a>
+      <a class="mobile-menu-link" href="pilates-equipment-buying-guide" onclick="toggleMenu()">BUYING GUIDE</a>
+      <a class="mobile-menu-link" href="/#education" onclick="toggleMenu()">EDUCATION</a>
+      <a class="mobile-menu-link" href="/#about" onclick="toggleMenu()">ABOUT</a>
+      <a class="mobile-menu-link" href="/#contact" onclick="toggleMenu()">CONTACT</a>
+    </div>
+    <a href="/#contact" class="mobile-menu-cta" onclick="toggleMenu()">INQUIRE NOW</a>
+  </div>
+</div>
+
+<section class="hero">
+  <img class="hero-bg" src="optimized/temnox-hero-wide-1920.jpg" srcset="optimized/temnox-hero-wide-1280.jpg 1280w, optimized/temnox-hero-wide-1920.jpg 1920w, optimized/temnox-hero-wide-2560.jpg 2560w" sizes="100vw" width="1920" height="768" alt="The Temnox collection by KCONE — commercial Pilates equipment line">
+  <div class="hero-inner">
+      <a href="/" class="back-link" style="color:#ffffff;"><svg width="14" height="10" viewBox="0 0 14 10" aria-hidden="true"><path d="M5 1L1 5l4 4" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round"/><path d="M1 5h12" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg>BACK TO HOME</a>
+    <div class="hero-kicker">KCONE · NEW COLLECTION</div>
+    <h1>The Art of <em>Subtraction</em>.<br>This is Temnox.</h1>
+    <div class="hero-sub">
+      For 7 years, we asked what a person really needs when they begin to practice.
+      The answer grew simpler — reliable craft, intuitive use, restrained design.
+      So we subtracted. Temnox is what remains.
+    </div>
+    <div class="hero-slogan">
+      <span><b>Control is Freedom</b>Temnox®</span>
+      <span><b>Undefined.</b>KC ONE®</span>
+      <span><b>Less is more.</b>Since 2019</span>
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="story-inner">
+    <div>
+      <div class="label">OUR PHILOSOPHY</div>
+      <h2>Seven years of addition.<br>Then, one decisive subtraction.</h2>
+      <p>Since 2018, KCONE has manufactured professional Pilates equipment. In 2019, we began
+      exploring what a Pilates machine could be — adding function, adding features, adding detail.
+      We did the addition, in our own way.</p>
+      <p>Until one day we asked ourselves: <em>"When a person begins to practice, what do they truly need?"</em>
+      The answer kept getting simpler. So we did the subtraction.</p>
+    </div>
+    <div class="story-video">
+      <video controls autoplay muted loop playsinline preload="auto" poster="images/temnox/temnox-launch-1.jpg" src="images/temnox/temnox-launch.mp4"></video>
+    </div>
+  </div>
+  <div class="three">
+    <div class="item"><h3>Reliable Craft</h3><p>So the body can focus on the feeling of movement.</p></div>
+    <div class="item"><h3>Intuitive Use</h3><p>So the practice returns to its essence.</p></div>
+    <div class="item"><h3>Restrained Design</h3><p>So the machine is forgotten entirely.</p></div>
+  </div>
+</section>
+
+<section class="collection">
+  <div class="label">THE COLLECTION</div>
+  <h2>Temnox Models</h2>
+  <div class="product-grid">
+    <div class="product-card">
+      <div class="img-wrap"><img src="optimized/temnox-model-tbh-900.jpg" alt="Temnox TBH Reformer"></div>
+      <div class="body"><div class="code">TBH · REFORMER</div><div class="name">Temnox TBH Reformer</div><div class="desc">Designed for the different training systems — one reformer that adapts to each studio's teaching method.</div></div>
+    </div>
+    <div class="product-card">
+      <div class="img-wrap"><img src="optimized/temnox-model-tsh-900.jpg" alt="Temnox TSH Reformer"></div>
+      <div class="body"><div class="code">TSH · REFORMER</div><div class="name">Temnox TSH Reformer</div><div class="desc">The core bed, reduced to its essence. Built for the modern studio.</div></div>
+    </div>
+    <div class="product-card">
+      <div class="img-wrap"><img src="optimized/temnox-model-tbk-900.jpg" alt="Temnox TBK Cadillac"></div>
+      <div class="body"><div class="code">TBK · CADILLAC</div><div class="name">Temnox Cadillac</div><div class="desc">The trapeze table, stripped back to what a teacher truly needs.</div></div>
+    </div>
+    <div class="product-card">
+      <div class="img-wrap"><img src="optimized/temnox-model-tbw-900.jpg" alt="Temnox TBW Wunda Chair"></div>
+      <div class="body"><div class="code">TBW · WUNDA CHAIR</div><div class="name">Temnox Wunda Chair</div><div class="desc">A chair that disappears into the room, and into the practice.</div></div>
+    </div>
+    <div class="product-card">
+      <div class="img-wrap"><img src="optimized/temnox-model-tbt-900.jpg" alt="Temnox TBT Ladder Barrel"></div>
+      <div class="body"><div class="code">TBT · LADDER BARREL</div><div class="name">Temnox Ladder Barrel</div><div class="desc">The barrel that supports, not distracts. Pure, measured, quiet.</div></div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="cta">
+  <h2>Bring Temnox to your studio.</h2>
+  <p>Commercial-ready, factory-direct. Speak with KCONE about the Temnox collection.</p>
+  <a href="/#contact" class="btn">INQUIRE NOW</a>
+</section>
+
+<footer>
+  <div class="footer-logo"><img src="黑色背景的蓝色符号logo.png" width="1600" height="1522" loading="lazy" decoding="async" alt="KCONE Professional Pilates Equipment Manufacturer" style="height:34px;width:auto;"></div>
+  <div class="footer-tagline">TO BE UNDEFINED · PROFESSIONAL PILATES EQUIPMENT</div>
+  <div class="footer-links">
+    <a href="mailto:karen@kconepilates.com" style="color:rgba(245,244,240,0.5);text-decoration:none;">Karen@kconepilates.com</a>
+    <span style="color:rgba(245,244,240,0.2);">|</span>
+    <a href="https://wa.me/8618550508086" target="_blank" rel="noopener" style="color:rgba(245,244,240,0.5);text-decoration:none;">WhatsApp</a>
+  </div>
+  <div>© 2018–2026 KCONE. All rights reserved.</div>
+</footer>
+
+<script src="site.js" defer></script>
+</body>
+</html>

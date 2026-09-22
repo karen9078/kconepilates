@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KCONE Workshop Video</title>
+<link rel="stylesheet" href="site.css">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
@@ -12,7 +13,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   padding: 20px;
 }
 .back-btn {
@@ -29,10 +30,175 @@ video {
   max-width: 100%;
   max-height: 85vh;
   border-radius: 2px;
+}</style>
+<style id="font-compensation">
+/* ── 字体方案 A（Inter）+ 字重与对比度补偿：原 CSS 为细衬线设计 ── */
+:root {
+  --gray-color: #6b6963;
 }
-</style>
+body, p, li, td, th, input, select, textarea, button {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+h1, h2, h3, h4 { font-weight: 500; }
+strong, b { font-weight: 600; }
+h1 { letter-spacing: -0.022em; }
+h2, h3 { letter-spacing: -0.015em; }
+/* 浅灰文字加深一档（提升对比度） */
+:root { --gray: #6b6963; --gray-light: #9c9a92; }</style>
 </head>
 <body>
+<nav id="main-nav">
+  <a href="/#home" class="nav-logo"><img src="images/logo.png" width="616" height="128" alt="KCONE Pilates — Professional Equipment Manufacturer Supplier" style="height:36px;width:auto;display:block;"></a>
+
+  <div class="nav-center">
+
+    <!-- SHOP with dropdown -->
+    <div class="nav-item">
+      <div class="nav-link active">
+        SHOP
+        <svg viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
+        </svg>
+      </div>
+
+      <div class="shop-dropdown">
+        <div class="dropdown-inner">
+
+          <!-- Col 1: Featured image -->
+          <div class="dropdown-col">
+            <div class="dropdown-col-label">Featured</div>
+            <a class="dropdown-img-card" href="/#products" onclick="closeDrop()">
+              <div class="dropdown-img-wrap">
+                <img src="optimized/full-studio-setup-900.jpg" srcset="optimized/full-studio-setup-480.jpg 480w, optimized/full-studio-setup-900.jpg 900w" sizes="(max-width: 900px) 100vw, 33vw" width="1838" height="1150" loading="lazy" decoding="async" alt="KCONE Full Studio Pilates Equipment Setup">
+              </div>
+              <div class="dropdown-item-name">Full Studio Setup</div>
+              <div class="dropdown-item-sub">Professional Reformer Line</div>
+            </a>
+            <a class="dropdown-img-card" href="rx-detail" onclick="closeDrop()" style="margin-top:14px;">
+              <div class="dropdown-img-wrap">
+                <img src="optimized/powerhouse-rx-900.jpg" srcset="optimized/powerhouse-rx-480.jpg 480w, optimized/powerhouse-rx-900.jpg 900w" sizes="(max-width: 900px) 100vw, 33vw" width="4000" height="2252" loading="lazy" decoding="async" alt="KCONE PowerHouse RX — Upright Dual-Rail Rehab Pilates Trainer">
+              </div>
+              <div class="dropdown-item-name">PowerHouse RX</div>
+              <div class="dropdown-item-sub">YUR® RX-RX01 · New 2025</div>
+            </a>
+          </div>
+
+          <!-- Col 2: New Arrival — Temnox 在上，RX 在下 -->
+          <div class="dropdown-col">
+            <div class="dropdown-col-label">New Arrival</div>
+            <a class="dropdown-img-card" href="temnox.html" onclick="closeDrop()">
+              <div class="dropdown-img-wrap">
+                <img src="optimized/shop-temnox-900.jpg" srcset="optimized/shop-temnox-480.jpg 480w, optimized/shop-temnox-900.jpg 900w" sizes="(max-width: 900px) 100vw, 33vw" width="900" height="600" loading="lazy" decoding="async" alt="Temnox Collection by KCONE — commercial Pilates equipment line">
+              </div>
+              <div class="dropdown-item-name">Temnox Collection</div>
+              <div class="dropdown-item-sub">The Art of Subtraction · New Line</div>
+            </a>
+          </div>
+
+          <!-- Col 3: Product list -->
+          <div class="dropdown-col">
+            <div class="dropdown-col-label">All Products</div>
+            <div class="dropdown-list">
+              <a class="dropdown-list-item" href="tsh-detail" onclick="closeDrop()">
+                <span>Reformer TSH</span>
+                <span class="dropdown-list-item-code">TSH</span>
+              </a>
+              <a class="dropdown-list-item" href="tbh-detail" onclick="closeDrop()">
+                <span>Reformer TBH</span>
+                <span class="dropdown-list-item-code">TBH</span>
+              </a>
+              <a class="dropdown-list-item" href="tbw-detail" onclick="closeDrop()">
+                <span>Wunda Chair TBW</span>
+                <span class="dropdown-list-item-code">TBW</span>
+              </a>
+              <a class="dropdown-list-item" href="tbt-detail" onclick="closeDrop()">
+                <span>Ladder Barrel TBT</span>
+                <span class="dropdown-list-item-code">TBT</span>
+              </a>
+              <a class="dropdown-list-item" href="tbk-detail" onclick="closeDrop()">
+                <span>Cadillac TBK</span>
+                <span class="dropdown-list-item-code">TBK</span>
+              </a>
+              <a class="dropdown-list-item" href="tbht-detail" onclick="closeDrop()">
+                <span>Temnox Half Tower TBHT</span>
+                <span class="dropdown-list-item-code">TBHT</span>
+              </a>
+              <a class="dropdown-list-item" href="tbj-detail" onclick="closeDrop()">
+                <span>Temnox Spine Corrector TBJ</span>
+                <span class="dropdown-list-item-code">TBJ</span>
+              </a>
+              <a class="dropdown-list-item" href="rx-detail" onclick="closeDrop()">
+                <span>PowerHouse RX</span>
+                <span class="dropdown-list-item-code">RX01</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+        <div class="dropdown-footer">
+          <span class="dropdown-footer-text">B2B wholesale · Standard color options · Factory direct</span>
+          <a class="dropdown-footer-link" href="/#contact" onclick="closeDrop()">GET A QUOTE →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <a class="nav-link" href="temnox.html">NEW ARRIVAL</a>
+    </div>
+
+    <div class="nav-item">
+      <a class="nav-link" href="blog">BLOG</a>
+    </div>
+
+    <div class="nav-item">
+      <a class="nav-link" href="pilates-equipment-buying-guide">BUYING GUIDE</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="/#education">EDUCATION</a>
+    </div>
+
+    <div class="nav-item">
+      <a class="nav-link" href="/#about">ABOUT</a>
+    </div>
+  </div>
+
+  <div class="nav-right">
+    <a href="/#contact" class="nav-cta">INQUIRE NOW</a>
+  </div>
+  <!-- Hamburger (mobile only) -->
+  <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-inner">
+    <div class="mobile-menu-section">
+      <div class="mobile-menu-label">Products</div>
+      <a class="mobile-menu-link" href="temnox.html" onclick="toggleMenu()" style="font-weight:600;">Temnox Collection ↗</a>
+      <a class="mobile-menu-link" href="tsh-detail" onclick="toggleMenu()">Reformer TSH</a>
+      <a class="mobile-menu-link" href="tbh-detail" onclick="toggleMenu()">Reformer TBH</a>
+      <a class="mobile-menu-link" href="tbw-detail" onclick="toggleMenu()">Wunda Chair TBW</a>
+      <a class="mobile-menu-link" href="tbt-detail" onclick="toggleMenu()">Ladder Barrel TBT</a>
+      <a class="mobile-menu-link" href="tbk-detail" onclick="toggleMenu()">Cadillac TBK</a>
+      <a class="mobile-menu-link" href="tbht-detail" onclick="toggleMenu()">Temnox Half Tower TBHT</a>
+      <a class="mobile-menu-link" href="tbj-detail" onclick="toggleMenu()">Temnox Spine Corrector TBJ</a>
+      <a class="mobile-menu-link" href="rx-detail" onclick="toggleMenu()">PowerHouse RX</a>
+    </div>
+    <div class="mobile-menu-section">
+      <div class="mobile-menu-label">Navigate</div>
+      <a class="mobile-menu-link" href="temnox.html" onclick="toggleMenu()">NEW ARRIVAL</a>
+      <a class="mobile-menu-link" href="blog" onclick="toggleMenu()">BLOG</a>
+      <a class="mobile-menu-link" href="pilates-equipment-buying-guide" onclick="toggleMenu()">BUYING GUIDE</a>
+      <a class="mobile-menu-link" href="/#education" onclick="toggleMenu()">EDUCATION</a>
+      <a class="mobile-menu-link" href="/#about" onclick="toggleMenu()">ABOUT</a>
+      <a class="mobile-menu-link" href="/#contact" onclick="toggleMenu()">CONTACT</a>
+    </div>
+    <a href="/#contact" class="mobile-menu-cta" onclick="toggleMenu()">INQUIRE NOW</a>
+  </div>
+</div>
   <a href="/" class="back-btn" id="backBtn">← BACK TO KCONE</a>
   <video controls autoplay playsinline>
     <source src="" type="video/mp4">
@@ -43,7 +209,7 @@ var videos = {
   3: 'ABOUT/KCONE%20Workshop%C2%A0Diaries%C2%A0The%C2%A0Art%C2%A0of%C2%A0Manufacturing%233/KCONE%20Workshop%C2%A0Diaries%C2%A0The%C2%A0Art%C2%A0of%C2%A0Manufacturing%233.mp4',
   4: 'ABOUT/KCONE%C2%A0Workshop%C2%A0Diaries%C2%A0The%C2%A0Art%C2%A0of%C2%A0Manufacturing%234/KCONE%C2%A0Workshop%C2%A0Diaries%C2%A0The%C2%A0Art%C2%A0of%C2%A0Manufacturing%234.mp4',
   5: 'ABOUT/KCONE%C2%A0Workshop%C2%A0Diaries%C2%A0The%C2%A0Art%C2%A0of%C2%A0Manufacturing%235/KCONE%C2%A0Workshop%C2%A0Diaries%C2%A0The%C2%A0Art%C2%A0of%C2%A0Manufacturing%235.mp4',
-  6: 'EDUCATION/PHI%E8%81%94%E5%90%88%E5%BC%80%E5%8F%91.mp4'
+  6: 'EDUCATION/PHI-joint-dev.mp4'
 };
 
 var p = new URLSearchParams(window.location.search);
@@ -59,5 +225,32 @@ if (id && videos[id]) {
   }
 }
 </script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+Tawk_API.customStyle = {};
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6a8af739bf875a344567a933/1k0ndbevm';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+
+<footer>
+  <div class="footer-logo"><img src="黑色背景的蓝色符号logo.png" width="1600" height="1522" loading="lazy" decoding="async" alt="KCONE Professional Pilates Equipment Manufacturer" style="height:34px;width:auto;"></div>
+  <div class="footer-tagline">TO BE UNDEFINED · PROFESSIONAL PILATES EQUIPMENT</div>
+  <div class="footer-links">
+    <a href="mailto:karen@kconepilates.com" style="color:rgba(245,244,240,0.5);text-decoration:none;">Karen@kconepilates.com</a>
+    <span style="color:rgba(245,244,240,0.2);">|</span>
+    <a href="https://wa.me/8618550508086" target="_blank" rel="noopener" style="color:rgba(245,244,240,0.5);text-decoration:none;">WhatsApp</a>
+  </div>
+  <div>© 2018–2026 KCONE. All rights reserved.</div>
+</footer>
+<script src="site.js" defer></script>
 </body>
 </html>
