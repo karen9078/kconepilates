@@ -21,12 +21,12 @@
 
     var css = document.createElement('style');
     css.textContent = [
-      '#kcone-ai-fab{position:fixed;right:20px;bottom:20px;z-index:998;width:56px;height:56px;border-radius:50%;',
+      '#kcone-ai-fab{position:fixed;right:20px;bottom:100px;z-index:9998;width:56px;height:56px;border-radius:50%;',
       'background:#0f0f0f;color:#fff;border:none;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.22);',
       'display:flex;align-items:center;justify-content:center;transition:transform .2s ease;}',
       '#kcone-ai-fab:hover{transform:scale(1.06);}',
       '#kcone-ai-fab svg{width:26px;height:26px;}',
-      '#kcone-ai-panel{position:fixed;right:20px;bottom:88px;z-index:999;width:360px;max-width:calc(100vw - 32px);',
+      '#kcone-ai-panel{position:fixed;right:20px;bottom:168px;z-index:9997;width:360px;max-width:calc(100vw - 32px);',
       'height:520px;max-height:calc(100vh - 130px);background:#fff;border-radius:14px;overflow:hidden;display:none;',
       'flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,.18);border:1px solid #e8e6e1;}',
       '#kcone-ai-panel.open{display:flex;}',
@@ -49,7 +49,7 @@
       '#kcone-ai-send{background:#0f0f0f;color:#fff;border:none;border-radius:9px;padding:0 16px;font-size:13px;cursor:pointer;font-family:inherit;}',
       '#kcone-ai-send:disabled{opacity:.4;cursor:default;}',
       '@media(max-width:520px){#kcone-ai-panel{right:8px;left:8px;width:auto;bottom:80px;height:calc(100vh - 110px);max-height:none;}',
-      '#kcone-ai-fab{right:14px;bottom:14px;width:52px;height:52px;}}'
+      '#kcone-ai-fab{right:14px;bottom:92px;width:52px;height:52px;}}'
     ].join('');
     document.head.appendChild(css);
 
