@@ -7,7 +7,7 @@
   'use strict';
 
   // ⚠️ 部署 Worker 后替换成你的地址（例如 https://kcone-ai.<你的账号>.workers.dev）
-  var WORKER_URL = window.KCONE_AI_ENDPOINT || 'https://kcone-ai.WORKER.workers.dev';
+  var WORKER_URL = window.KCONE_AI_ENDPOINT || 'https://kcone-ai.karendong5886.workers.dev';
   // 尚未配置真实 Worker 地址时不初始化，避免访客看到无法使用的入口
   if (!WORKER_URL || WORKER_URL.indexOf('WORKER.workers.dev') !== -1) { return; }
   var MAX_HISTORY = 10;
