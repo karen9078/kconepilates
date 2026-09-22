@@ -260,14 +260,8 @@ footer {
 }
 
 /* ── WHATSAPP FLOAT ── */
-.wa-float {
-  position: fixed; left: 20px; bottom: 20px; z-index: 999;
-  width: 58px; height: 58px; border-radius: 50%;
-  background: #25D366; color: #fff;
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 8px 24px rgba(37,211,102,0.38);
-  transition: transform 0.2s ease;
-}
+.wa-float { position: absolute; left: 20px; top: 120px; bottom: auto; z-index: 999;
+  width: 58px; height: 58px; border-radius: 50%; background: #25D366; color: #fff;
 .wa-float:hover { transform: scale(1.08); }
 .wa-float .wa-ring {
   position: absolute; inset: 0; border-radius: 50%;
@@ -287,7 +281,7 @@ footer {
 }
 .wa-float:hover .wa-float-tip { opacity: 1; }
 @media (max-width: 700px) {
-  .wa-float { left: 14px; bottom: 14px; width: 52px; height: 52px; }
+  .wa-float { left: 14px; top: 108px; bottom: auto; width: 52px; height: 52px; }
   .wa-float-tip { display: none; }
 }
 }

@@ -21,13 +21,15 @@
 
     var css = document.createElement('style');
     css.textContent = [
-      '#kcone-ai-fab{position:fixed;right:20px;bottom:20px;z-index:9998;width:56px;height:56px;border-radius:50%;',
+      /* 容器：绝对定位 → 随页面滚动（不再固定在屏幕底部）*/
+      '#kcone-ai-root{position:absolute;right:20px;top:120px;z-index:9998;}',
+      '#kcone-ai-fab{display:block;margin-left:auto;width:56px;height:56px;border-radius:50%;',
       'background:#0f0f0f;color:#fff;border:none;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.22);',
-      'display:flex;align-items:center;justify-content:center;transition:transform .2s ease;}',
+      'align-items:center;justify-content:center;transition:transform .2s ease;padding:0;}',
       '#kcone-ai-fab:hover{transform:scale(1.06);}',
-      '#kcone-ai-fab svg{width:26px;height:26px;}',
-      '#kcone-ai-panel{position:fixed;right:20px;bottom:88px;z-index:9997;width:360px;max-width:calc(100vw - 32px);',
-      'height:520px;max-height:calc(100vh - 130px);background:#fff;border-radius:14px;overflow:hidden;display:none;',
+      '#kcone-ai-fab svg{width:26px;height:26px;display:block;margin:auto;}',
+      '#kcone-ai-panel{position:absolute;right:0;top:68px;z-index:9997;width:360px;max-width:calc(100vw - 32px);',
+      'height:520px;max-height:calc(100vh - 120px);background:#fff;border-radius:14px;overflow:hidden;display:none;',
       'flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,.18);border:1px solid #e8e6e1;}',
       '#kcone-ai-panel.open{display:flex;}',
       '#kcone-ai-head{background:#0f0f0f;color:#fff;padding:14px 16px;display:flex;align-items:center;gap:10px;}',
@@ -48,8 +50,8 @@
       '#kcone-ai-input:focus{border-color:#0f0f0f;}',
       '#kcone-ai-send{background:#0f0f0f;color:#fff;border:none;border-radius:9px;padding:0 16px;font-size:13px;cursor:pointer;font-family:inherit;}',
       '#kcone-ai-send:disabled{opacity:.4;cursor:default;}',
-      '@media(max-width:520px){#kcone-ai-panel{right:8px;left:8px;width:auto;bottom:80px;height:calc(100vh - 150px);max-height:none;}',
-      '#kcone-ai-fab{right:14px;bottom:14px;width:52px;height:52px;}}'
+      '@media(max-width:520px){#kcone-ai-root{right:14px;top:108px;}#kcone-ai-fab{width:52px;height:52px;}',
+      '#kcone-ai-panel{right:0;width:calc(100vw - 44px);top:66px;height:auto;max-height:min(520px,calc(100vh - 200px));}}'
     ].join('');
     document.head.appendChild(css);
 
@@ -71,8 +73,11 @@
       '</div>' +
       '<div id="kcone-ai-row"><input id="kcone-ai-input" type="text" placeholder="Type your question…" autocomplete="off"><button id="kcone-ai-send">Send</button></div>';
 
-    document.body.appendChild(fab);
-    document.body.appendChild(panel);
+    var root = document.createElement('div');
+    root.id = 'kcone-ai-root';
+    root.appendChild(panel);
+    root.appendChild(fab);
+    document.body.appendChild(root);
 
     var msgs = panel.querySelector('#kcone-ai-msgs');
     var input = panel.querySelector('#kcone-ai-input');
