@@ -70,19 +70,17 @@ nav.scrolled { box-shadow: 0 1px 20px rgba(0,0,0,0.06); }
 
 /* ── SHOP DROPDOWN ── */
 .shop-dropdown {
-  position: absolute; top: 64px; left: 50%; transform: translateX(-63%);
-  width: 780px;
-  background: var(--white);
-  border: 1px solid var(--border-strong);
-  border-top: 2px solid var(--black);
-  box-shadow: 0 24px 60px rgba(0,0,0,0.12);
+  position: absolute; top: 64px; left: 2px; right: auto;
+  transform: none; width: 780px; max-width: calc(100vw - 4px);
+  max-height: calc(100vh - 84px); overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background: var(--white); border: 1px solid var(--border); border-top: none;
   opacity: 0; visibility: hidden; pointer-events: none;
-  transform: translateX(-63%) translateY(-8px);
   transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
 }
 .nav-item:hover .shop-dropdown {
   opacity: 1; visibility: visible; pointer-events: all;
-  transform: translateX(-63%) translateY(0);
+  transform: translateY(0);
 }
 
 .dropdown-inner {
@@ -319,21 +317,4 @@ body { font-weight: 500; }
 .hero .back-link, .dark .back-link { color: #ffffff; }
 .hero .back-link:hover { color: #ffffff; opacity: 0.7; transform: translateX(-2px); }
 
-/* ── SHOP 下拉：窄屏贴屏幕左边（导航栏有 backdrop-filter，fixed 会失效，故让 .nav-item 变 static 以下拉以导航栏为基准）── */
-@media (max-width: 1400px) {
-  .nav-item { position: static; }
-  .shop-dropdown {
-    position: absolute;
-    top: 64px; left: 2px; right: auto;
-    transform: none;
-    max-width: calc(100vw - 4px);
-    max-height: calc(100vh - 84px);
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  .nav-item:hover .shop-dropdown,
-  .shop-dropdown:hover,
-  .shop-dropdown.open {
-    transform: none;
-  }
-}
+
