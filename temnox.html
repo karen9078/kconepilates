@@ -96,11 +96,17 @@ nav a.active { color: var(--black); font-weight: 600; position: relative; }
   .story-inner { grid-template-columns: 1fr; gap: 24px; }
   .story p { max-width: 100%; }
 }
-@media (max-width: 900px) {
-  .hero { min-height: auto; padding: 84px 20px 36px; }
-  .hero h1 { font-size: 30px; }
-  .hero-sub { font-size: 14px; line-height: 1.65; margin-bottom: 24px; }
-  .hero-slogan { gap: 16px; font-size: 11px; }
+@media (max-width: 1100px) {
+  .hero { min-height: 46vh; padding: 88px 28px 40px; }
+  .hero h1 { font-size: 36px; }
+  .hero-sub { font-size: 14px; line-height: 1.7; margin-bottom: 26px; max-width: 100%; }
+  .hero-slogan { gap: 18px; font-size: 11px; }
+}
+@media (max-width: 680px) {
+  .hero { min-height: auto; padding: 80px 18px 32px; }
+  .hero h1 { font-size: 27px; line-height: 1.15; }
+  .hero-sub { font-size: 13px; line-height: 1.6; margin-bottom: 20px; }
+  .hero-slogan { gap: 12px; font-size: 10px; }
 }
 </style>
 <style id="font-compensation">
