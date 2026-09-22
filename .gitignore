@@ -28,3 +28,6 @@
 /_local_server.py
 /_fix_navlinks.py
 /site-map.html
+
+# AI 询盘助手（含商业话术知识库，不上公开仓库）
+/ai-assistant-demo/
