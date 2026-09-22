@@ -99,3 +99,32 @@
     boot();
   }
 })();
+
+  /* ── SHOP 下拉：点击切换（触屏/窄屏友好，原来只靠 hover）── */
+  (function () {
+    function closeAllDrops() {
+      document.querySelectorAll('.shop-dropdown.open').forEach(function (d) {
+        d.classList.remove('open');
+        d.style.opacity = ''; d.style.visibility = ''; d.style.pointerEvents = '';
+      });
+    }
+    document.querySelectorAll('.nav-item').forEach(function (item) {
+      var trigger = item.querySelector('.nav-link');
+      var drop = item.querySelector('.shop-dropdown');
+      if (!trigger || !drop) return;
+      trigger.addEventListener('click', function (e) {
+        e.preventDefault(); e.stopPropagation();
+        var willOpen = !drop.classList.contains('open');
+        closeAllDrops();
+        if (willOpen) {
+          drop.classList.add('open');
+          drop.style.opacity = '1'; drop.style.visibility = 'visible'; drop.style.pointerEvents = 'all';
+        }
+      });
+    });
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.nav-item')) closeAllDrops();
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAllDrops(); });
+    window.closeDrop = closeAllDrops;
+  })();
