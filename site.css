@@ -320,10 +320,10 @@ body { font-weight: 500; }
 .hero .back-link:hover { color: #ffffff; opacity: 0.7; transform: translateX(-2px); }
 
 /* ── SHOP 下拉：窄屏只调整定位（保持三列布局，原来居中会左边超出屏幕）── */
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .shop-dropdown {
     position: fixed;
-    top: 64px; left: 4px;
+    top: 64px; left: 2px;
     transform: none;
     max-width: calc(100vw - 24px);
     max-height: calc(100vh - 84px);
