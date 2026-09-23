@@ -115,20 +115,39 @@
       var typing = bubble('Thinking…', 'kcone-ai-typing');
 
       var ctrl = new AbortController();
-      var timer = setTimeout(function () { ctrl.abort(); }, 45000);
+      var timer = setTimeout(function () { ctrl.abort(); }, 60000);
+
       fetch(WORKER_URL.replace(/\/$/, '') + '/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: q, history: history.slice(0, -1) }),
         signal: ctrl.signal
       })
-        .then(function (r) { clearTimeout(timer); return r.json(); })
-        .then(function (d) {
-          typing.remove();
-          var reply = (d && d.reply) || d.error || "Sorry, I couldn't reach the assistant. Please email karen@kconepilates.com or WhatsApp +86 18550508086.";
-          bubble(reply, 'kcone-ai-bot');
-          history.push({ role: 'assistant', content: reply });
-          save();
+        .then(function (r) {
+          clearTimeout(timer);
+          // 流式：逐字显示
+          if (r.body && r.body.getReader) {
+            typing.remove();
+            var el = bubble('', 'kcone-ai-bot');
+            var reader = r.body.getReader();
+            var dec = new TextDecoder();
+            var shown = '';
+            function pump() {
+              return reader.read().then(function (res) {
+                if (res.done) { done(shown); return; }
+                shown += dec.decode(res.value, { stream: true });
+                el.textContent = shown.replace(/<LEAD>[\s\S]*?<\/LEAD>/g, '').replace(/<LEAD>[\s\S]*$/, '').trim();
+                msgs.scrollTop = msgs.scrollHeight;
+                return pump();
+              });
+            }
+            return pump().catch(function () { done(shown); });
+          }
+          // 兼容：非流式（JSON）
+          return r.json().then(function (d) {
+            typing.remove();
+            done((d && d.reply) || d.error || '');
+          });
         })
         .catch(function (err) {
           clearTimeout(timer);
@@ -139,6 +158,13 @@
           bubble(msg, 'kcone-ai-bot');
         })
         .then(function () { send.disabled = false; input.focus(); });
+
+      function done(text) {
+        var clean = (text || '').trim();
+        if (!clean) clean = "Sorry, I couldn't answer that. Please email karen@kconepilates.com or WhatsApp +86 18550508086.";
+        history.push({ role: 'assistant', content: clean });
+        save();
+      }
     }
 
     fab.addEventListener('click', function () {
