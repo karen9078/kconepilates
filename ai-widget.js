@@ -22,7 +22,7 @@
     var css = document.createElement('style');
     css.textContent = [
       /* 容器：绝对定位 → 随页面滚动（不再固定在屏幕底部）*/
-      '#kcone-ai-root{position:absolute;right:20px;top:50vh;top:50dvh;z-index:9998;}',
+      '#kcone-ai-root{position:absolute;right:20px;top:50vh;top:50dvh;bottom:auto;z-index:9998;}',
       '#kcone-ai-fab{display:block;margin-left:auto;width:56px;height:56px;border-radius:50%;',
       'background:#0f0f0f;color:#fff;border:none;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.22);',
       'align-items:center;justify-content:center;transition:transform .2s ease;padding:0;}',
@@ -50,7 +50,7 @@
       '#kcone-ai-input:focus{border-color:#0f0f0f;}',
       '#kcone-ai-send{background:#0f0f0f;color:#fff;border:none;border-radius:9px;padding:0 16px;font-size:13px;cursor:pointer;font-family:inherit;}',
       '#kcone-ai-send:disabled{opacity:.4;cursor:default;}',
-      '@media(max-width:520px){#kcone-ai-root{right:14px;top:50vh;top:50dvh;}#kcone-ai-fab{width:52px;height:52px;}',
+      '@media(max-width:520px){#kcone-ai-root{right:14px;top:50vh;top:50dvh;bottom:auto;}#kcone-ai-fab{width:52px;height:52px;}',
       '#kcone-ai-panel{right:0;width:calc(100vw - 44px);bottom:64px;top:auto;height:auto;max-height:calc(50vh - 80px);}}'
     ].join('');
     document.head.appendChild(css);
