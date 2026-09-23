@@ -269,11 +269,7 @@ footer {
   text-decoration: none; box-shadow: 0 8px 24px rgba(42,159,214,0.35);
   transition: transform 0.2s ease;
 }
-.wa-float .wa-ring {
-  position: absolute; inset: 0; border-radius: 50%;
-  border: 2px solid rgba(37,211,102,0.55);
-  animation: waPulse 2.2s ease-out infinite;
-}
+.wa-float .wa-ring { display: none; }
 @keyframes waPulse {
   0% { transform: scale(1); opacity: 1; }
   100% { transform: scale(1.7); opacity: 0; }
