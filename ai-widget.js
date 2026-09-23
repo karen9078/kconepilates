@@ -125,6 +125,14 @@
       })
         .then(function (r) {
           clearTimeout(timer);
+          var ctype = (r.headers && r.headers.get('Content-Type')) || '';
+          // JSON 响应（非流式/降级）→ 按 JSON 解析
+          if (ctype.indexOf('application/json') !== -1) {
+            return r.json().then(function (d) {
+              typing.remove();
+              done((d && d.reply) || (d && d.error) || '');
+            });
+          }
           // 流式：逐字显示
           if (r.body && r.body.getReader) {
             typing.remove();
@@ -143,10 +151,11 @@
             }
             return pump().catch(function () { done(shown); });
           }
-          // 兼容：非流式（JSON）
-          return r.json().then(function (d) {
+          // 兼容：无 body 流时按文本读取
+          return r.text().then(function (t) {
             typing.remove();
-            done((d && d.reply) || d.error || '');
+            if (!t) { bubble('Connection issue — please try again.', 'kcone-ai-bot'); return; }
+            try { var d = JSON.parse(t); done((d && d.reply) || t); } catch (e) { done(t); }
           });
         })
         .catch(function (err) {
