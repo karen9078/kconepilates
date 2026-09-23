@@ -29,8 +29,8 @@
       'align-items:center;justify-content:center;transition:transform .2s ease;padding:0;}',
       '#kcone-ai-fab:hover{transform:scale(1.06);}',
       '#kcone-ai-fab svg{width:19px;height:19px;display:block;flex-shrink:0;}',
-      '#kcone-ai-panel{position:absolute;right:0;bottom:68px;top:auto;z-index:9997;width:360px;max-width:calc(100vw - 32px);',
-      'height:520px;max-height:calc(50vh - 90px);background:#fff;border-radius:14px;overflow:hidden;display:none;',
+      '#kcone-ai-panel{position:fixed;right:24px;top:50%;transform:translateY(-50%);z-index:9997;width:400px;max-width:calc(100vw - 48px);',
+      'height:min(720px,84vh);background:#fff;border-radius:14px;overflow:hidden;display:none;',
       'flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,.18);border:1px solid #e8e6e1;}',
       '#kcone-ai-panel.open{display:flex;}',
       '#kcone-ai-head{background:#0f0f0f;color:#fff;padding:14px 16px;display:flex;align-items:center;gap:10px;}',
@@ -52,7 +52,7 @@
       '#kcone-ai-send{background:#0f0f0f;color:#fff;border:none;border-radius:9px;padding:0 16px;font-size:13px;cursor:pointer;font-family:inherit;}',
       '#kcone-ai-send:disabled{opacity:.4;cursor:default;}',
       '@media(max-width:700px){#kcone-ai-root{right:14px;top:50vh;top:50dvh;bottom:auto;}#kcone-ai-fab{height:46px;padding:0 16px 0 13px;font-size:12.5px;}',
-      '#kcone-ai-panel{right:0;width:calc(100vw - 44px);bottom:64px;top:auto;height:auto;max-height:calc(50vh - 80px);}}'
+      '#kcone-ai-panel{right:0;width:calc(100vw - 44px);bottom:64px;top:auto;transform:none;height:auto;max-height:calc(50vh - 80px);}}'
     ].join('');
     document.head.appendChild(css);
 
