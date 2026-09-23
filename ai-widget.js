@@ -50,7 +50,7 @@
       '#kcone-ai-input:focus{border-color:#0f0f0f;}',
       '#kcone-ai-send{background:#0f0f0f;color:#fff;border:none;border-radius:9px;padding:0 16px;font-size:13px;cursor:pointer;font-family:inherit;}',
       '#kcone-ai-send:disabled{opacity:.4;cursor:default;}',
-      '@media(max-width:520px){#kcone-ai-root{right:14px;top:50vh;top:50dvh;bottom:auto;}#kcone-ai-fab{width:52px;height:52px;}',
+      '@media(max-width:700px){#kcone-ai-root{right:14px;top:50vh;top:50dvh;bottom:auto;}#kcone-ai-fab{width:52px;height:52px;}',
       '#kcone-ai-panel{right:0;width:calc(100vw - 44px);bottom:64px;top:auto;height:auto;max-height:calc(50vh - 80px);}}'
     ].join('');
     document.head.appendChild(css);
