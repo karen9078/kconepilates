@@ -260,7 +260,7 @@ footer {
 }
 
 /* ── WHATSAPP FLOAT ── */
-.wa-float { position: absolute; left: 20px; top: 50vh; top: 50dvh; bottom: auto; z-index: 999;
+.wa-float { position: fixed; left: 20px; top: 50vh; top: 50dvh; bottom: auto; z-index: 999;
   width: 58px; height: 58px; border-radius: 50%; background: #25D366; color: #fff;
 .wa-float:hover { transform: scale(1.08); }
 .wa-float .wa-ring {
