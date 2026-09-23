@@ -260,9 +260,15 @@ footer {
 }
 
 /* ── WHATSAPP FLOAT ── */
-.wa-float { position: fixed; left: 20px; top: 50vh; top: 50dvh; bottom: auto; z-index: 999;
-  width: 58px; height: 58px; border-radius: 50%; background: #25D366; color: #fff;
-.wa-float:hover { transform: scale(1.08); }
+.wa-float {
+  position: fixed; left: 20px; top: 50vh; top: 50dvh; bottom: auto; z-index: 999;
+  height: 52px; padding: 0 20px 0 16px; border-radius: 26px;
+  background: #2A9FD6; color: #fff;
+  display: flex; align-items: center; gap: 9px;
+  font-size: 13.5px; font-weight: 600; letter-spacing: .01em; white-space: nowrap;
+  text-decoration: none; box-shadow: 0 8px 24px rgba(42,159,214,0.35);
+  transition: transform 0.2s ease;
+}
 .wa-float .wa-ring {
   position: absolute; inset: 0; border-radius: 50%;
   border: 2px solid rgba(37,211,102,0.55);
@@ -272,6 +278,7 @@ footer {
   0% { transform: scale(1); opacity: 1; }
   100% { transform: scale(1.7); opacity: 0; }
 }
+.wa-float svg { width: 19px; height: 19px; flex-shrink: 0; display: block; }
 .wa-float-tip {
   position: absolute; left: 70px; top: 50%; transform: translateY(-50%);
   background: var(--black); color: var(--white);
@@ -281,7 +288,7 @@ footer {
 }
 .wa-float:hover .wa-float-tip { opacity: 1; }
 @media (max-width: 700px) {
-  .wa-float { left: 14px; top: 50vh; top: 50dvh; bottom: auto; width: 52px; height: 52px; }
+  .wa-float { left: 14px; height: 46px; padding: 0 16px 0 13px; font-size: 12.5px; }
   .wa-float-tip { display: none; }
 }
 }
