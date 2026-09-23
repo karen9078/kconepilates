@@ -23,11 +23,12 @@
     css.textContent = [
       /* 容器：绝对定位 → 随页面滚动（不再固定在屏幕底部）*/
       '#kcone-ai-root{position:fixed;right:20px;top:50vh;top:50dvh;bottom:auto;z-index:9998;}',
-      '#kcone-ai-fab{display:block;margin-left:auto;width:58px;height:58px;border-radius:50%;',
+      '#kcone-ai-fab{display:flex;align-items:center;gap:9px;margin-left:auto;height:52px;padding:0 20px 0 16px;',
+      'border-radius:26px;white-space:nowrap;font-size:13.5px;font-weight:600;letter-spacing:.01em;',
       'background:#0f0f0f;color:#fff;border:none;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.22);',
       'align-items:center;justify-content:center;transition:transform .2s ease;padding:0;}',
       '#kcone-ai-fab:hover{transform:scale(1.06);}',
-      '#kcone-ai-fab svg{width:26px;height:26px;display:block;margin:auto;}',
+      '#kcone-ai-fab svg{width:19px;height:19px;display:block;flex-shrink:0;}',
       '#kcone-ai-panel{position:absolute;right:0;bottom:68px;top:auto;z-index:9997;width:360px;max-width:calc(100vw - 32px);',
       'height:520px;max-height:calc(50vh - 90px);background:#fff;border-radius:14px;overflow:hidden;display:none;',
       'flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,.18);border:1px solid #e8e6e1;}',
@@ -50,7 +51,7 @@
       '#kcone-ai-input:focus{border-color:#0f0f0f;}',
       '#kcone-ai-send{background:#0f0f0f;color:#fff;border:none;border-radius:9px;padding:0 16px;font-size:13px;cursor:pointer;font-family:inherit;}',
       '#kcone-ai-send:disabled{opacity:.4;cursor:default;}',
-      '@media(max-width:700px){#kcone-ai-root{right:14px;top:50vh;top:50dvh;bottom:auto;}#kcone-ai-fab{width:52px;height:52px;}',
+      '@media(max-width:700px){#kcone-ai-root{right:14px;top:50vh;top:50dvh;bottom:auto;}#kcone-ai-fab{height:46px;padding:0 16px 0 13px;font-size:12.5px;}',
       '#kcone-ai-panel{right:0;width:calc(100vw - 44px);bottom:64px;top:auto;height:auto;max-height:calc(50vh - 80px);}}'
     ].join('');
     document.head.appendChild(css);
@@ -58,7 +59,7 @@
     var fab = document.createElement('button');
     fab.id = 'kcone-ai-fab';
     fab.setAttribute('aria-label', 'Open AI assistant');
-    fab.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z"/></svg>';
+    fab.innerHTML = '<span>Ask AI</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z"/></svg>';
 
     var panel = document.createElement('div');
     panel.id = 'kcone-ai-panel';
