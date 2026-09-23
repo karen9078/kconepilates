@@ -113,12 +113,15 @@
       send.disabled = true;
       var typing = bubble('Thinking…', 'kcone-ai-typing');
 
+      var ctrl = new AbortController();
+      var timer = setTimeout(function () { ctrl.abort(); }, 45000);
       fetch(WORKER_URL.replace(/\/$/, '') + '/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: q, history: history.slice(0, -1) })
+        body: JSON.stringify({ message: q, history: history.slice(0, -1) }),
+        signal: ctrl.signal
       })
-        .then(function (r) { return r.json(); })
+        .then(function (r) { clearTimeout(timer); return r.json(); })
         .then(function (d) {
           typing.remove();
           var reply = (d && d.reply) || d.error || "Sorry, I couldn't reach the assistant. Please email karen@kconepilates.com or WhatsApp +86 18550508086.";
@@ -126,9 +129,13 @@
           history.push({ role: 'assistant', content: reply });
           save();
         })
-        .catch(function () {
+        .catch(function (err) {
+          clearTimeout(timer);
           typing.remove();
-          bubble('Connection issue — please try again, or contact karen@kconepilates.com / WhatsApp +86 18550508086.', 'kcone-ai-bot');
+          var msg = (err && err.name === 'AbortError')
+            ? 'The assistant is taking longer than usual. Please try again, or email karen@kconepilates.com / WhatsApp +86 18550508086.'
+            : 'Connection issue — please try again, or contact karen@kconepilates.com / WhatsApp +86 18550508086.';
+          bubble(msg, 'kcone-ai-bot');
         })
         .then(function () { send.disabled = false; input.focus(); });
     }
