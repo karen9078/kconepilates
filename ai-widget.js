@@ -23,7 +23,7 @@
     css.textContent = [
       /* 容器：绝对定位 → 随页面滚动（不再固定在屏幕底部）*/
       '#kcone-ai-root{position:absolute;right:20px;top:50vh;top:50dvh;bottom:auto;z-index:9998;}',
-      '#kcone-ai-fab{display:block;margin-left:auto;width:56px;height:56px;border-radius:50%;',
+      '#kcone-ai-fab{display:block;margin-left:auto;width:58px;height:58px;border-radius:50%;',
       'background:#0f0f0f;color:#fff;border:none;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.22);',
       'align-items:center;justify-content:center;transition:transform .2s ease;padding:0;}',
       '#kcone-ai-fab:hover{transform:scale(1.06);}',
