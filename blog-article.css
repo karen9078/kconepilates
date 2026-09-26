@@ -41,7 +41,8 @@ li { margin-bottom: 8px; }
 .product-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 22px; }
 .product-links a { padding: 12px 14px; color: var(--black); text-decoration: none; border: 1px solid var(--border); }
 .product-links a:hover { background: var(--off); }
-.cta { margin-top: 50px; padding: 28px; color: var(--white); background: var(--black); }
+.cta { margin-top: 50px; padding: 32px 28px; color: var(--white); background: var(--black); text-align: center; }
+.cta a { margin-top: 6px; }
 .cta h2, .cta p { color: var(--white); }
 .cta p { opacity: .75; }
 .cta a { display: inline-block; padding: 12px 22px; color: var(--black); background: var(--white); text-decoration: none; font-size: 12px; letter-spacing: .08em; }
