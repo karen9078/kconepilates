@@ -189,7 +189,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="optimized/hero-temnox-d-1600.jpg" imagesrcset="optimized/hero-temnox-d-960.jpg 960w, optimized/hero-temnox-d-1600.jpg 1600w, optimized/hero-temnox-d-2400.jpg 2400w, optimized/hero-temnox-d-3200.jpg 3200w, optimized/hero-temnox-d-3840.jpg 3840w" imagesizes="100vw" fetchpriority="high">
 <link rel="preload" as="image" href="optimized/hero-temnox-m-480.jpg" media="(max-width: 768px)" fetchpriority="high">
-<link rel="stylesheet" href="site.css?v=425373">
+<link rel="stylesheet" href="site.css?v=425898">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -375,7 +375,7 @@ section { padding: 56px 48px; }
 }
 .shop-heading {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(25px, 2.5vw, 34px); font-weight: 500;
+  font-size: clamp(24px, 2.3vw, 32px); font-weight: 500;
 }
 .shop-note { font-size: 13px; color: var(--black); font-weight: 500; }
 
@@ -469,7 +469,7 @@ section { padding: 56px 48px; }
 }
 .rx-heading {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(22px, 2.8vw, 34px); font-weight: 500; line-height: 1.1;
+  font-size: clamp(24px, 2.3vw, 32px); font-weight: 500; line-height: 1.1;
   margin-bottom: 12px;
 }
 .rx-sub { font-size: 11px; color: var(--gray); letter-spacing: 0.06em; margin-bottom: 20px; line-height: 1.7; }
@@ -494,7 +494,7 @@ section { padding: 56px 48px; }
 }
 .about-heading {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(25px, 2.5vw, 34px); font-weight: 500; line-height: 1.15; margin-bottom: 20px;
+  font-size: clamp(24px, 2.3vw, 32px); font-weight: 500; line-height: 1.15; margin-bottom: 20px;
 }
 .about-body { font-size: 14px; color: var(--gray); line-height: 1.85; }
 .about-pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
@@ -552,7 +552,7 @@ section { padding: 56px 48px; }
 .features { background: var(--off); color: var(--black); }
 .features-heading {
   font-family: 'Inter', sans-serif;
-  font-size: 34px; font-weight: 500; color: var(--black);
+  font-size: clamp(24px, 2.3vw, 32px); font-weight: 500; color: var(--black);
   margin-bottom: 36px; max-width: 420px;
 }
 .features-grid {
@@ -591,7 +591,7 @@ section { padding: 56px 48px; }
 .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
 .contact-heading {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(25px, 2.5vw, 34px); font-weight: 500; line-height: 1.15; margin-bottom: 14px;
+  font-size: clamp(24px, 2.3vw, 32px); font-weight: 500; line-height: 1.15; margin-bottom: 14px;
 }
 .contact-sub { font-size: 13px; color: var(--gray); max-width: 340px; line-height: 1.8; margin-bottom: 36px; }
 .contact-quick { display: flex; flex-direction: column; }
@@ -750,18 +750,18 @@ footer {
   section { padding: 36px 20px; }
   .rx-section { padding: 36px 20px; }
   .about-inner, .contact-inner, .rx-inner { grid-template-columns: 1fr; gap: 28px; }
-  .about-heading { font-size: 26px; }
-  .contact-heading { font-size: 26px; }
+  .about-heading { font-size: clamp(24px, 2.3vw, 32px); }
+  .contact-heading { font-size: clamp(24px, 2.3vw, 32px); }
 
   /* Products */
   .product-grid { grid-template-columns: repeat(4, 1fr); }
   .shop-intro { flex-direction: column; gap: 8px; }
-  .shop-heading { font-size: clamp(22px, 5.5vw, 26px); }
+  .shop-heading { font-size: clamp(24px, 2.3vw, 32px); }
   .product-card { padding: 6px; }
 
   /* Features */
   .features-grid { grid-template-columns: 1fr; }
-  .features-heading { font-size: 26px; max-width: 100%; }
+  .features-heading { font-size: clamp(24px, 2.3vw, 32px); max-width: 100%; }
   .feature-item { padding: 20px 16px; min-height: 200px; }
 
   /* Contact form */
@@ -776,8 +776,8 @@ footer {
   .hero-title { font-size: 28px; }
   .hero-left { padding: 32px 16px 28px; }
   section { padding: 28px 16px; }
-  .about-heading { font-size: 28px; }
-  .contact-heading { font-size: 26px; }}
+  .about-heading { font-size: clamp(24px, 2.3vw, 32px); }
+  .contact-heading { font-size: clamp(24px, 2.3vw, 32px); }}
 
 /* ── WHATSAPP FLOAT ── */
 @keyframes waPulse {
@@ -1271,7 +1271,7 @@ body { font-weight: 500; }
 <!-- WHY CHOOSE US -->
 <section id="why-choose-us" style="background:var(--white); padding:56px 48px;">
   <div class="section-eyebrow" style="justify-content:center;">WHY CHOOSE KCONE</div>
-  <h2 style="font-family:'Inter', sans-serif; font-size:34px; font-weight: 500; text-align:center; margin:16px 0 40px;">Direct from the Manufacturer — China Pilates Equipment Factory</h2>
+  <h2 style="font-family:'Inter', sans-serif; font-size:32px; font-weight: 500; text-align:center; margin:16px 0 40px;">Direct from the Manufacturer — China Pilates Equipment Factory</h2>
   <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:32px;">
     <div class="fade-in" style="transition-delay:0s; background:var(--off); padding:24px; border-radius:1px; border-top:3px solid #2d3436; position:relative;">
       <div style="font-size:28px; font-weight: 500; color:var(--gray-light); margin-bottom:8px; display:flex; align-items:center; gap:8px;">01<svg width="20" height="20" viewBox="0 0 24 24" fill="#2d3436"><path d="M12 3L2 9v2l10 5 10-5V9l-10-6zM2 18l10 5 10-5v-3l-10 5-10-5v3z"/></svg></div>
@@ -1342,7 +1342,7 @@ body { font-weight: 500; }
 
 <section id="faq" style="background:var(--off); padding:56px 48px;">
   <div class="section-eyebrow">FREQUENTLY ASKED QUESTIONS</div>
-  <h2 style="font-family:'Inter', sans-serif; font-size:34px; font-weight: 500; margin-bottom:40px; max-width:600px;">Common Questions About<br>KCONE Equipment</h2>
+  <h2 style="font-family:'Inter', sans-serif; font-size:32px; font-weight: 500; margin-bottom:40px; max-width:600px;">Common Questions About<br>KCONE Equipment</h2>
   <div style="max-width:860px; display:flex; flex-direction:column; gap:0;">
 
     <div style="border-top:1px solid var(--border); padding:24px 0;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
@@ -1814,6 +1814,6 @@ function closeVideo() {
   }
 })();
 </script>
-<script src="site.js?v=425373" defer></script>
-<script src="ai-widget.js?v=425373" defer></script>
+<script src="site.js?v=425898" defer></script>
+<script src="ai-widget.js?v=425898" defer></script>
 </body></html>
