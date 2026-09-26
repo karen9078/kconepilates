@@ -3,71 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KCONE Workshop Video</title>
-<link rel="stylesheet" href="site.css?v=414545">
-<style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-  background: #0f0f0f;
-  display: flex; flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  font-family: 'Inter', sans-serif;
-  padding: 20px;
-}
-.back-btn {
-  display: inline-flex; align-items: center; gap: 6px;
-  color: rgba(255,255,255,0.5);
-  text-decoration: none;
-  font-size: 12px; letter-spacing: 0.08em;
-  margin-bottom: 24px;
-  transition: color 0.2s;
-  align-self: flex-start;
-}
-.back-btn:hover { color: #fff; }
-video {
-  max-width: 100%;
-  max-height: 85vh;
-  border-radius: 2px;
-}</style>
-<style id="font-compensation">
-/* ── 字体方案 A（Inter）+ 字重与对比度补偿：原 CSS 为细衬线设计 ── */
-:root {
-  --gray-color: #6b6963;
-}
-body, p, li, td, th, input, select, textarea, button {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-}
-h1, h2, h3, h4 { font-weight: 500; }
-strong, b { font-weight: 600; }
-h1 { letter-spacing: -0.022em; }
-h2, h3 { letter-spacing: -0.015em; }
-/* 浅灰文字加深一档（提升对比度） */
-:root { --gray: #6b6963; --gray-light: #9c9a92; }</style>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://kconepilates.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "KCONE Workshop Video",
-      "item": "https://kconepilates.com/video"
-    }
-  ]
-}
-</script>
+<title>Page Not Found | KCONE Pilates</title>
+<meta name="description" content="The page you were looking for does not exist. Browse KCONE Pilates equipment, product specifications and buying guides instead.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://kconepilates.com/404">
+<link rel="stylesheet" href="blog-article.css?v=414545">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
 <nav id="main-nav">
   <a href="/#home" class="nav-logo"><img src="images/logo.png?v=2" width="720" height="145" alt="KCONE Pilates — Professional Equipment Manufacturer Supplier" style="height:36px;width:auto;display:block;"></a>
 
@@ -168,7 +114,7 @@ h2, h3 { letter-spacing: -0.015em; }
     </div>
 
     <div class="nav-item">
-      <a class="nav-link" href="blog">BLOG</a>
+      <a class="nav-link active" href="blog">BLOG</a>
     </div>
 
     <div class="nav-item">
@@ -220,33 +166,32 @@ h2, h3 { letter-spacing: -0.015em; }
     <a href="/#contact" class="mobile-menu-cta" onclick="toggleMenu()">INQUIRE NOW</a>
   </div>
 </div>
-  <a href="/" class="back-btn" id="backBtn">← BACK TO KCONE</a>
-  <video controls autoplay playsinline>
-    <source src="" type="video/mp4">
-  </video>
-<script>
-var videos = {
-  2: 'ABOUT/KCONE%20Workshop%C2%A0Diaries%C2%A0The%C2%A0Art%C2%A0of%C2%A0Manufacturing%232/KCONE%20Workshop%C2%A0Diaries%C2%A0The%C2%A0Art%C2%A0of%C2%A0Manufacturing%232.mp4',
-  3: 'ABOUT/KCONE%20Workshop%C2%A0Diaries%C2%A0The%C2%A0Art%C2%A0of%C2%A0Manufacturing%233/KCONE%20Workshop%C2%A0Diaries%C2%A0The%C2%A0Art%C2%A0of%C2%A0Manufacturing%233.mp4',
-  4: 'ABOUT/KCONE%C2%A0Workshop%C2%A0Diaries%C2%A0The%C2%A0Art%C2%A0of%C2%A0Manufacturing%234/KCONE%C2%A0Workshop%C2%A0Diaries%C2%A0The%C2%A0Art%C2%A0of%C2%A0Manufacturing%234.mp4',
-  5: 'ABOUT/KCONE%C2%A0Workshop%C2%A0Diaries%C2%A0The%C2%A0Art%C2%A0of%C2%A0Manufacturing%235/KCONE%C2%A0Workshop%C2%A0Diaries%C2%A0The%C2%A0Art%C2%A0of%C2%A0Manufacturing%235.mp4',
-  6: 'EDUCATION/PHI-joint-dev.mp4'
-};
-
-var p = new URLSearchParams(window.location.search);
-var id = p.get('id');
-if (id && videos[id]) {
-  document.querySelector('video source').src = videos[id];
-  document.querySelector('video').load();
-  // Set back button to return to the right section
-  if (id >= 2 && id <= 5) {
-    document.getElementById('backBtn').href = '/#about';
-  } else if (id == 6) {
-    document.getElementById('backBtn').href = '/#education';
-  }
-}
-</script>
-
+<main class="article-wrap">
+  <div style="min-height:52vh;display:flex;flex-direction:column;justify-content:center;padding:40px 0;">
+    <div class="eyebrow">404</div>
+    <h1>This page could not be found</h1>
+    <p class="lede">The link may be outdated, or the page may have moved. Here is where most visitors go next:</p>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:28px 0 8px;max-width:640px;">
+      <a href="/" style="padding:16px 18px;border:1px solid #e5e3dc;border-radius:6px;text-decoration:none;color:#0f0f0f;">
+        <strong style="display:block;font-size:15px;margin-bottom:4px;">Home</strong>
+        <span style="font-size:13px;color:#6b6b6b;">KCONE Pilates overview and full product range</span>
+      </a>
+      <a href="/temnox" style="padding:16px 18px;border:1px solid #e5e3dc;border-radius:6px;text-decoration:none;color:#0f0f0f;">
+        <strong style="display:block;font-size:15px;margin-bottom:4px;">Temnox Collection</strong>
+        <span style="font-size:13px;color:#6b6b6b;">The current reformer, Cadillac, chair and barrel line</span>
+      </a>
+      <a href="/tsh-detail" style="padding:16px 18px;border:1px solid #e5e3dc;border-radius:6px;text-decoration:none;color:#0f0f0f;">
+        <strong style="display:block;font-size:15px;margin-bottom:4px;">Reformer TSH</strong>
+        <span style="font-size:13px;color:#6b6b6b;">Flagship reformer specifications</span>
+      </a>
+      <a href="/blog" style="padding:16px 18px;border:1px solid #e5e3dc;border-radius:6px;text-decoration:none;color:#0f0f0f;">
+        <strong style="display:block;font-size:15px;margin-bottom:4px;">Buying Guides</strong>
+        <span style="font-size:13px;color:#6b6b6b;">Studio planning, sourcing and ordering guides</span>
+      </a>
+    </div>
+    <p style="font-size:14px;color:#6b6b6b;margin-top:22px;">Need help finding something? Email <a href="mailto:info@kconepilates.com" style="color:#0f0f0f;">info@kconepilates.com</a> or WhatsApp +86 185 5050 8086.</p>
+  </div>
+</main>
 
 <footer>
   <div class="footer-logo"><img src="optimized/footer-logo.png?v=2" width="200" height="190" loading="lazy" decoding="async" alt="KCONE Professional Pilates Equipment Manufacturer" style="height:34px;width:auto;"></div>
@@ -258,6 +203,8 @@ if (id && videos[id]) {
   </div>
   <div>© 2018–2026 KCONE. All rights reserved.</div>
 </footer>
+
+
 <script src="site.js?v=414545" defer></script>
 <a href="https://wa.me/8618550508086?text=Hi%20KCONE%2C%20I%27d%20like%20to%20ask%20about%20your%20Pilates%20equipment." class="wa-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><span>WhatsApp</span>
   <span class="wa-ring"></span>
