@@ -162,15 +162,15 @@
           clearTimeout(timer);
           typing.remove();
           var msg = (err && err.name === 'AbortError')
-            ? 'The assistant is taking longer than usual. Please try again, or email karen@kconepilates.com / WhatsApp +86 18550508086.'
-            : 'Connection issue — please try again, or contact karen@kconepilates.com / WhatsApp +86 18550508086.';
+            ? 'The assistant is taking longer than usual. Please try again, or email info@kconepilates.com / WhatsApp +86 18550508086.'
+            : 'Connection issue — please try again, or contact info@kconepilates.com / WhatsApp +86 18550508086.';
           bubble(msg, 'kcone-ai-bot');
         })
         .then(function () { send.disabled = false; input.focus(); });
 
       function done(text) {
         var clean = (text || '').trim();
-        if (!clean) clean = "Sorry, I couldn't answer that. Please email karen@kconepilates.com or WhatsApp +86 18550508086.";
+        if (!clean) clean = "Sorry, I couldn't answer that. Please email info@kconepilates.com or WhatsApp +86 18550508086.";
         history.push({ role: 'assistant', content: clean });
         save();
       }
